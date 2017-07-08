@@ -12,5 +12,9 @@ int main(void)
     a.clear();
     a[0] = "oath";
     printf("hello name[%s]\n", a[0].c_str());
+    for(int i=0;i<100;i++)
+    {
+        printf("hello %d",i);
+    }
     return 0;
 }
