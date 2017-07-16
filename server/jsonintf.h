@@ -16,7 +16,10 @@ public:
 
     // json convert to string
     std::string JsonToString();
-    
+
+    // print json tree 
+    void PrintValueTree();
+
     // get json[key] = int
     int GetIntFromJson(const char* key, int& nIntVal, int nDefaultInt);
 

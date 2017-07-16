@@ -14,10 +14,10 @@ static void TestJson(void)
     std::vector<std::string> telVec;
     std::vector<Json::Value> carVec;
 
-    printf("Start to Test Json...\n");
-
     std::string jsonStr = "{\"age\":18, \"name\":\"oath\", \"car\":[{\"city\":\"GD\",\"num\":9986},{\"city\":\"HB\",\"num\":5566}], \"relation\":{\"father\":\"dick\", \"mother\":\"lucy\"}, \"score\":[100,200,300,400], \"tel\":[\"135333\",\"1569208\"]}";
     CJsonIntf nJsonUser(jsonStr);
+
+    nJsonUser.PrintValueTree();
     nJsonUser.GetIntFromJson("age", age, 0);
     nJsonUser.GetStringFromJson("name", name, defStr);
     nJsonUser.GetIntArrayFromJson("score", scoreVec);
@@ -29,6 +29,7 @@ static void TestJson(void)
     nRelation.GetStringFromJson("father", father, defStr);
     nRelation.GetStringFromJson("mother", mother, defStr);
     
+    printf("Start to Test Json...\n");
     printf("relation json str: %s\n", relStr.c_str());
     for(int i = 0; i < (int)carVec.size(); i++)
     {

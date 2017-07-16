@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
 #include "jsonintf.h"
 
 CJsonIntf::CJsonIntf(const std::string& jsonStr)
@@ -24,6 +25,13 @@ std::string CJsonIntf::JsonToString()
         strVal = writer.write(m_value);
     }
     return strVal;
+}
+
+// print json tree 
+void CJsonIntf::PrintValueTree(void)
+{
+    Json::StyledWriter styleWriter;
+    std::cout << styleWriter.write(m_value);
 }
 
 // get json[key] = int
