@@ -1,0 +1,82 @@
+#makefile base
+
+mk_obj_dir := $(shell mkdir -p $(BIN_DIR))
+mk_obj_dir := $(shell mkdir -p $(OBJ_PATH))
+
+
+INC := $(addprefix  -I, $(shell find $(INC_DIR)  -maxdepth 4 -type d))
+
+SRC_PATH =  $(shell find $(SRC_DIR)  -maxdepth 4 -type d) 
+FILES_PATTERN = $(addsuffix /*.c, $(SRC_PATH))  $(addsuffix /*.cpp, $(SRC_PATH))
+FILES =   $(wildcard $(FILES_PATTERN)) 
+BASENAME = $(notdir  $(basename $(FILES))) 
+OBJ = $(addprefix $(OBJ_PATH)/, $(addsuffix .o, $(BASENAME)))
+VPATH = $(SRC_PATH)
+
+
+LINK =  -rdynamic
+
+ifdef CCREACTOR_LIB
+LINK += -L$(CCREACTOR_LIB_PATH)/lib -l$(CCREACTOR_LIB)
+CC_LIB_INC := $(shell find $(CCREACTOR_LIB_PATH)  -maxdepth 4 -type d)
+CC_LIB_INC_PATH = $(addprefix -I, $(CC_LIB_INC))
+INC += $(CC_LIB_INC_PATH)
+endif
+
+ 
+ifdef LIB_MYSQL
+ifeq ($(LIB_MYSQL),ON)
+INC += -I/usr/local/mysql/include
+LINK += -L/usr/local/mysql/lib  -lmysqlclient
+endif
+endif
+
+ifdef LIB_MEMCACHE
+ifeq ($(LIB_MEMCACHE),ON)
+INC += -I/usr/local/include/libmemcached/
+LINK += -L/usr/local/lib  -lmemcached
+endif
+endif
+
+ifndef NET_PROTOCOL
+NET_PROTOCOL = -D__USE_BY_PROTOCOL__
+endif
+OPT     = -pipe -fno-ident
+CFLAGS += $(OPT) -O0 -g -pg -Wall -fPIC  $(NET_PROTOCOL)
+CFLAGS += $(INC)  
+ifdef GAME_DEFINES
+CFLAGS += $(GAME_DEFINES)
+endif 
+CXXFLAGS := $(CFLAGS)
+
+
+BIN = $(BIN_DIR)/$(BIN_NAME)
+
+.PHONY : all clean  a
+
+
+all: $(BIN)
+
+$(BIN): $(OBJ)
+	$(CXX) -o $@ $^ $(CXXFILAGS) $(LINK)
+	# md5sum $(BIN)
+	
+$(OBJ_PATH)/%.o: %.c 
+	$(CC) $(CFLAGS)  -c -pg -o $@ $<
+
+	
+$(OBJ_PATH)/%.o: %.cc 
+	$(CXX) $(CXXFLAGS)  -c -pg -o $@ $<
+
+	
+$(OBJ_PATH)/%.o: %.cpp 
+	$(CXX) $(CXXFLAGS) -c -pg -o $@ $<
+
+	
+	
+clean:
+	 rm -rf $(BIN) $(OBJ_PATH)/*
+	
+a: 
+	echo  $(CC_LIB_INC_PATH)  $(OBJ)  $(OBJ_PATH) $(VPATH)
+	

@@ -1,0 +1,12 @@
+#makefile  config 
+TARGET_PATH=lib
+TARGET=libjson.a
+INC_DIR = jsoncpp/include
+SRC_DIR = jsoncpp/src
+OBJ_PATH = obj
+
+
+###################
+
+
+include ./makefile.base
