@@ -1,62 +1,268 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <vector>
+#include <string>
+#include <list>
+#include <iostream>
+#include <algorithm>
+#include <functional>
 #include "jsonintf.h"
+#include "timer.h"
 
-// example for json
-static void TestJson(void)
+using std::list;
+using std::string;
+using std::vector;
+using std::map;
+using std::cout; 
+using std::endl;
+using namespace std::placeholders;
+
+extern void TestJson(void);
+
+void TestVector()
 {
-    int age = 0;
-    Json::Value relJson;
-    std::string defStr = "";
-    std::string name = "";
-    std::string father = "", mother = "";
-    std::vector<int> scoreVec;
-    std::vector<std::string> telVec;
-    std::vector<Json::Value> carVec;
-
-    std::string jsonStr = "{\"age\":18, \"name\":\"oath\", \"car\":[{\"city\":\"GD\",\"num\":9986},{\"city\":\"HB\",\"num\":5566}], \"relation\":{\"father\":\"dick\", \"mother\":\"lucy\"}, \"score\":[100,200,300,400], \"tel\":[\"135333\",\"1569208\"]}";
-    CJsonIntf nJsonUser(jsonStr);
-
-    nJsonUser.PrintValueTree();
-    nJsonUser.GetIntFromJson("age", age, 0);
-    nJsonUser.GetStringFromJson("name", name, defStr);
-    nJsonUser.GetIntArrayFromJson("score", scoreVec);
-    nJsonUser.GetStringArrayFromJson("tel", telVec);
-    nJsonUser.GetObjectArrayFromJson("car", carVec);
-    nJsonUser.GetObjectFromJson("relation", relJson);
-    CJsonIntf nRelation(relJson);
-    std::string relStr = nRelation.JsonToString();
-    nRelation.GetStringFromJson("father", father, defStr);
-    nRelation.GetStringFromJson("mother", mother, defStr);
-    
-    printf("Start to Test Json...\n");
-    printf("relation json str: %s\n", relStr.c_str());
-    for(int i = 0; i < (int)carVec.size(); i++)
+    std::vector<int> v{1,2,3,4,5};
+    cout << "Init vector:" << endl;
+    // use reference
+    for(auto &i : v)
     {
-        CJsonIntf nCar(carVec[i]);
-        std::string city = "";
-        std::string carStr = "";
-        int num = 0;
-        carStr = nCar.JsonToString();
-        nCar.GetStringFromJson("city", city, defStr);
-        nCar.GetIntFromJson("num", num, 0);
-        printf("car city[%s] num[%d]\n", city.c_str(), num);
-        printf("car json str: %s\n", carStr.c_str());
+        i *= i;
     }
-    printf("relation father[%s] mother[%s]\n", father.c_str(), mother.c_str()); 
-    printf("user name[%s] age[%d]\n", name.c_str(), age);
-    for(int i = 0; i < (int)scoreVec.size(); i++)
+    // not use reference
+    for(auto i : v)
     {
-        printf("score[%d]=%d\n", i, scoreVec[i]);
+        cout << i << ' ';
     }
-    for(int i = 0; i < (int)telVec.size(); i++)
+    cout << endl;
+}
+
+void TestUpper()
+{
+    cout << "- - - - - - - - Test1 - - - - - - - - - -" << endl;
+    string s("upper");
+    cout << "before: " << s << endl;
+    if(s.begin() != s.end())
     {
-        printf("tel[%d]=%s\n", i, telVec[i].c_str());
+        auto it = s.begin();
+        *it = toupper(*it);
+    }
+    cout << "after: " << s << endl;
+
+    cout << "- - - - - - - - Test2 - - - - - - - - - -" << endl;
+    vector<string> v{"oath", "helloOmg", "saKule007"};
+    for(auto it = v.begin(); it != v.end(); ++it)
+    {
+        for(auto& ch : *it)
+        {
+            ch = toupper(ch);
+        }
+    }
+    for(auto item : v)
+    {
+        cout << item << endl;
+    }
+}
+
+void TestIterator()
+{
+    // cbegin notice no change
+    vector<string> v{"word","old","","new","age"};
+    for(auto it = v.cbegin(); it != v.cend(); ++it)
+    {
+        if(it->empty())
+        {
+            cout << "find one empty" << endl;
+            continue;
+        }
+        cout << *it << endl;
+    }
+}
+
+void TestBinSearch()
+{
+    // notice bound
+    int target = -1;
+    vector<int> v{1,2,6,30,55,78,99,101,128};
+    auto beg = v.cbegin(), end = v.cend();
+    auto mid = beg + (end - beg) / 2;
+    while(mid != end)
+    {
+        if(*mid == target)
+        {
+            cout << "find target " << target << endl;
+            return;
+        }
+        else if(*mid > target)
+        {
+            end = mid;
+        }
+        else
+        {
+            beg = mid + 1; // find in next begin
+        }
+        mid = beg + (end - beg) / 2;
+    }
+    cout << "can not find the target" << endl;
+}
+
+void TestInsert()
+{
+    list<string> a{"haha","bbb","ccc","node"};
+    vector<string> ins1{"a1","a2","a3","a4"};
+    vector<string> ins2{"m11","m22","m33","m44"};
+    cout << "- - - - - - - - - - - - - Insert Method 1 - - - - - - - - - - -" << endl;
+    auto it = a.begin();
+    for(auto& item : ins1)
+    {
+        it = a.insert(it, item);
+    }
+    for(auto item : a)
+    {
+        cout << item << ' ';
+    }
+    cout << endl;
+    cout << "- - - - - - - - - - - - - Insert Method 2 - - - - - - - - - - -" << endl;
+    for(auto& item : ins2)
+    {
+        a.push_front(item);
+    }
+    for(auto item : a)
+    {
+        cout << item << ' ';
+    }
+    cout << endl;
+}
+
+void TestErase()
+{
+    list<int> v{1,3,4,5,7,9,23,6,8,91};
+    auto it = v.begin();
+    while(it != v.end())
+    {
+        if((*it % 2) != 0)
+        {
+            it = v.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+    for(const auto& item : v)
+    {
+        cout << item << ' ';
+    }
+    cout << endl;
+}
+
+void TestAlgorithm()
+{
+    vector<string> v{"oath","lidi","sakula","pattern","oath","dick","lidi"};
+    for(const auto& item : v)
+    {
+        cout << item << ' ';
+    }
+    cout << endl;
+    std::sort(v.begin(), v.end());
+    auto uniend = std::unique(v.begin(), v.end());
+    v.erase(uniend, v.end());
+    for(const auto& item : v)
+    {
+        cout << item << ' ';
+    }
+    cout << endl;
+}
+
+void TestMap()
+{
+    vector<string> v{"oath","an","laji","work","money","laji","no","money","forbid","the","world"};
+    list<string> ex{"a","an","the","no"};
+    map<string, int> wordmap;
+    for(const auto& item : v)
+    {
+        if(std::find(ex.cbegin(), ex.cend(), item) == ex.end())
+        {
+            ++wordmap[item];
+        }
+    }
+    for(const auto& item : wordmap)
+    {
+        cout << item.first << " occur " << item.second << " times " << endl;
+    }
+}
+
+bool CompareSize(string& s, int size)
+{
+    cout << s << endl;
+    return s.size() < size;
+}
+
+void TestBind()
+{   
+    class CBind 
+    {
+        public:
+            bool CheckSize(string& s, int size)
+            {
+                return s.size() < size;
+            }
+    };
+    auto f = std::bind(CompareSize, _1, 6);
+    string s("123456");
+    cout << f(s) << endl;
+}
+
+void TestTimeCallback(string& name)
+{
+    cout << "hello " << name << ": timer event callback" << endl;
+}
+
+void TestTimer()
+{
+    class CPerson
+    {
+    public:
+        CPerson(string& name):m_firstname(name) 
+        {
+
+        }
+        void PrintName(string& lastname)
+        {
+            cout << "FirstName: " << m_firstname << ", LastName: " << lastname << endl;
+        }
+    private:
+        string m_firstname;
+    };
+
+    string firstname("oath");
+    string lastname("lidi");
+    CPerson person(firstname);
+    CTimer timer;
+    //usage 1 : global func
+    //TimerCallback f = std::bind(TestTimeCallback, lastname);
+    //usage 2 : member func
+    TimerCallback f = std::bind(&CPerson::PrintName, &person, lastname);
+    timer.StartTimer(f, 5);
+    while(1)
+    {
+        timer.CheckExpire();
+        sleep(1);
     }
 }
 
 int main(void)
 {
-    TestJson();
+    //TestJson();
+    //TestVector();
+    //TestUpper();
+    //TestIterator();
+    //TestBinSearch();
+    //TestInsert();
+    //TestErase();
+    //TestAlgorithm();
+    //TestMap();
+    //TestBind();
+    TestTimer();
     return 0;
 }
