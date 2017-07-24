@@ -215,7 +215,7 @@ void TestBind()
 
 void TestTimeCallback(string& name)
 {
-    cout << "hello " << name << ": timer event callback" << endl;
+    cout << "Event1 - " << time(NULL) << " name: " << name << endl;
 }
 
 void TestTimer()
@@ -229,7 +229,7 @@ void TestTimer()
         }
         void PrintName(string& lastname)
         {
-            cout << "FirstName: " << m_firstname << ", LastName: " << lastname << endl;
+            cout << "Event2 - " << time(NULL) <<  " FirstName: " << m_firstname << ", LastName: " << lastname << endl;
         }
     private:
         string m_firstname;
@@ -240,10 +240,11 @@ void TestTimer()
     CPerson person(firstname);
     CTimerQueue tq;
     //usage 1 : global func
-    //TimerCallback f = std::bind(TestTimeCallback, lastname);
+    TimerCallback fg = std::bind(TestTimeCallback, lastname);
+    tq.RunAfter(fg, 3, 0);
     //usage 2 : member func
-    TimerCallback func = std::bind(&CPerson::PrintName, &person, lastname);
-    tq.RunAt(func, time(NULL)+5, 2);
+    TimerCallback fm = std::bind(&CPerson::PrintName, &person, lastname);
+    tq.RunAt(fm, time(NULL)+5, 2);
     while(1)
     {
         tq.ProcessExpire();

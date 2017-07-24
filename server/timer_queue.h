@@ -13,8 +13,7 @@ class CTimerQueue
 public:
     void ProcessExpire();
     void RunAt(TimerCallback& cb, int when, int interval);
-    //void RunAfter(TimerCallback& cb, int delay);
-    //void RunEvery(TimerCallback& cb, int interval);
+    void RunAfter(TimerCallback& cb, int delay, int interval);
 private:
     TimerSet m_timerSet;
 };
