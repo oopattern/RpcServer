@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <functional>
 #include "jsonintf.h"
-#include "timer.h"
+#include "timer_queue.h"
 
 using std::list;
 using std::string;
@@ -238,15 +238,15 @@ void TestTimer()
     string firstname("oath");
     string lastname("lidi");
     CPerson person(firstname);
-    CTimer timer;
+    CTimerQueue tq;
     //usage 1 : global func
     //TimerCallback f = std::bind(TestTimeCallback, lastname);
     //usage 2 : member func
-    TimerCallback f = std::bind(&CPerson::PrintName, &person, lastname);
-    timer.StartTimer(f, 5);
+    TimerCallback func = std::bind(&CPerson::PrintName, &person, lastname);
+    tq.RunAt(func, time(NULL)+5, 2);
     while(1)
     {
-        timer.CheckExpire();
+        tq.ProcessExpire();
         sleep(1);
     }
 }
