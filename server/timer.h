@@ -1,6 +1,7 @@
 #ifndef __TIMER_H__
 #define  __TIMER_H__
 #include <iostream>
+#include <functional>
 
 typedef std::function<void()> TimerCallback;
 
@@ -13,13 +14,21 @@ public:
 
     }
     void Run();
-    void UpdateExpire(int now)
-    {
-        m_expireSec = ((0 == m_interval) ? (0) : (now + m_interval));
-    }
     int GetExpire()
     {
         return m_expireSec;
+    }
+    bool IsRepeat()
+    {
+        return ((m_interval != 0) ? true : false);
+    }
+    bool IsValid()
+    {
+        return ((m_expireSec != 0) ? true : false);
+    }
+    void Restart(int now)
+    {
+        m_expireSec = now + m_interval;
     }
 private:
     TimerCallback m_callback;

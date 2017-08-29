@@ -1,0 +1,12 @@
+#makefile  config 
+TARGET_PATH=lib
+TARGET=libcore.a
+INC_DIR = net
+SRC_DIR = net
+OBJ_PATH = obj
+
+
+###################
+
+
+include ./makefile.base

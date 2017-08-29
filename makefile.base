@@ -42,7 +42,7 @@ ifndef NET_PROTOCOL
 NET_PROTOCOL = -D__USE_BY_PROTOCOL__
 endif
 OPT     = -pipe -fno-ident
-CFLAGS += $(OPT) -O0 -g -pg -Wall -fPIC -std=c++11 -stdlib=libc++ $(NET_PROTOCOL)
+CFLAGS += $(OPT) -O0 -g -pg -Wall -fPIC -std=c++11 $(NET_PROTOCOL)
 CFLAGS += $(INC)  
 ifdef GAME_DEFINES
 CFLAGS += $(GAME_DEFINES)

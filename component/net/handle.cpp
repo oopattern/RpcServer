@@ -51,7 +51,7 @@ int CClient::ProcessQuery()
 
     // reply to client
     char buf[AE_BUF_SIZE];
-    snprintf(buf, sizeof(buf), "hello unix time[%d]\n", time(NULL));
+    snprintf(buf, sizeof(buf), "hello unix time[%d]\n", (int)time(NULL));
     SendToClient(buf, strlen(buf));
 
     return 0;
@@ -61,7 +61,7 @@ int CClient::SendToClient(const char* buf, int len)
 {
     ssize_t nwritten = 0;
 
-    if(len > sizeof(m_replybuf))
+    if(len > (int)sizeof(m_replybuf))
     {
         len = sizeof(m_replybuf) - 1;
     }
@@ -80,6 +80,8 @@ int CClient::SendToClient(const char* buf, int len)
             }
         }
     }
+
+    return 0;
 }
 
 int InitServer(int port)
@@ -87,7 +89,6 @@ int InitServer(int port)
     int s = -1;
     int yes = 1;
     int flags = 0;
-    int domain = 0;
     struct sockaddr_in sa;
 
     bzero(&sa, sizeof(sa));

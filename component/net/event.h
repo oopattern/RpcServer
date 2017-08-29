@@ -2,7 +2,7 @@
 #define __EVENT_H__
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - -  
-#define AE_WAIT_TIME 2 
+#define AE_WAIT_TIME 10 
 #define AE_BUF_SIZE 1024
 #define MAX_EVENT_NUM (1024*10)
 

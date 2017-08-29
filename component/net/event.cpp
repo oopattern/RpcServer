@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <time.h>
 #include "event.h"
-#include "ae_epoll.cpp"
+#include "ae_epoll.h"
 
 #define TEST_DENUG 0
 
@@ -119,6 +119,7 @@ int ProcessEvent(aeEventLoop* eventLoop)
 {
     ProcessFileEvent(eventLoop);
     ProcessTimeEvent(eventLoop);
+    return 0;
 }
 
 int ProcessFileEvent(aeEventLoop* eventLoop)
@@ -141,11 +142,15 @@ int ProcessFileEvent(aeEventLoop* eventLoop)
         aeFileEvent* fe = &eventLoop->events[fd];
         
         // if need to clear mask?
-        if(fe->mask && (mask & AE_READABLE))
+        if(fe->mask 
+            && (mask & AE_READABLE)
+            && (fe->rfileProc != NULL))
         {
             fe->rfileProc(eventLoop, fd, fe->clientData, mask);
         }
-        if(fe-mask && (mask & AE_WRITABLE))
+        if(fe-mask 
+            && (mask & AE_WRITABLE)
+            && (fe->wfileProc != NULL))
         {
             fe->wfileProc(eventLoop, fd, fe->clientData, mask);
         }

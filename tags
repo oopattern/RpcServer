@@ -1,0 +1,719 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AE_ALL_EVENTS	component/net/event.h	18;"	d
+AE_BUF_SIZE	component/net/event.h	6;"	d
+AE_DONT_WAIT	component/net/event.h	19;"	d
+AE_ERR	component/net/event.h	10;"	d
+AE_FILE_EVENTS	component/net/event.h	16;"	d
+AE_NONE	component/net/event.h	12;"	d
+AE_NOTUSED	component/net/event.h	22;"	d
+AE_OK	component/net/event.h	9;"	d
+AE_READABLE	component/net/event.h	13;"	d
+AE_TIME_EVENTS	component/net/event.h	17;"	d
+AE_WAIT_TIME	component/net/event.h	5;"	d
+AE_WRITABLE	component/net/event.h	14;"	d
+ALIGNAS	component/jsoncpp/src/json_value.cpp	32;"	d	file:
+Args	component/jsoncpp/include/value.h	/^  typedef std::vector<PathArgument> Args;$/;"	t	class:Json::Path
+ArrayIndex	component/jsoncpp/include/forwards.h	/^typedef unsigned int ArrayIndex;$/;"	t	namespace:Json
+ArrayIndex	component/jsoncpp/include/value.h	/^  typedef Json::ArrayIndex ArrayIndex;$/;"	t	class:Json::Value
+ArrayIndex	component/jsoncpp/include/value.h	/^  typedef Value::ArrayIndex ArrayIndex;$/;"	t	class:Json::ValueInternalArray
+BIND_F1	server/main.cpp	/^typedef std::function<void (string&,float)> BIND_F1;$/;"	t	file:
+BIND_F2	server/main.cpp	/^typedef std::function<void (int,int,int)> BIND_F2;$/;"	t	file:
+BIN_DIR	Makefile	/^BIN_DIR=bin$/;"	m
+BIN_NAME	Makefile	/^BIN_NAME=hello$/;"	m
+BatchAllocator	component/jsoncpp/src/json_batchallocator.h	/^  BatchAllocator(unsigned int objectsPerPage = 255)$/;"	f	class:Json::BatchAllocator
+BatchAllocator	component/jsoncpp/src/json_batchallocator.h	/^class BatchAllocator {$/;"	c	namespace:Json
+BatchInfo	component/jsoncpp/src/json_batchallocator.h	/^  struct BatchInfo {$/;"	s	class:Json::BatchAllocator
+BindFunc	server/main.cpp	/^int BindFunc(int arg1, std::string& arg2, float arg3)$/;"	f
+BucketIndex	component/jsoncpp/include/value.h	/^  typedef unsigned int BucketIndex;$/;"	t	class:Json::ValueInternalMap
+CCREACTOR_LIB	Makefile	/^CCREACTOR_LIB = ccreactor$/;"	m
+CCREACTOR_LIB_PATH	Makefile	/^CCREACTOR_LIB_PATH = component$/;"	m
+CClient	component/net/handle.cpp	/^CClient::CClient(const char* name, int fd)$/;"	f	class:CClient
+CClient	component/net/handle.h	/^class CClient$/;"	c
+CGlobalCfg	component/net/global.cpp	/^CGlobalCfg::CGlobalCfg()$/;"	f	class:CGlobalCfg
+CGlobalCfg	component/net/global.h	/^class CGlobalCfg {$/;"	c
+CJsonIntf	server/jsonintf.cpp	/^CJsonIntf::CJsonIntf(const Json::Value& jsonVal)$/;"	f	class:CJsonIntf
+CJsonIntf	server/jsonintf.cpp	/^CJsonIntf::CJsonIntf(const std::string& jsonStr)$/;"	f	class:CJsonIntf
+CJsonIntf	server/jsonintf.h	/^class CJsonIntf$/;"	c
+CPPTL_AUTOLINK_DLL	component/jsoncpp/include/autolink.h	18;"	d
+CPPTL_AUTOLINK_DLL	component/jsoncpp/include/autolink.h	20;"	d
+CPPTL_AUTOLINK_NAME	component/jsoncpp/include/autolink.h	17;"	d
+CPPTL_JSON_ASSERTIONS_H_INCLUDED	component/jsoncpp/include/assertions.h	7;"	d
+CPPTL_JSON_FEATURES_H_INCLUDED	component/jsoncpp/include/feature.h	7;"	d
+CPPTL_JSON_H_INCLUDED	component/jsoncpp/include/value.h	7;"	d
+CPPTL_JSON_READER_H_INCLUDED	component/jsoncpp/include/reader.h	7;"	d
+CTimer	server/timer.h	/^    CTimer(TimerCallback& cb, int when, int interval) $/;"	f	class:CTimer
+CTimer	server/timer.h	/^class CTimer$/;"	c
+CTimerQueue	server/timer_queue.cpp	/^CTimerQueue::CTimerQueue()$/;"	f	class:CTimerQueue
+CTimerQueue	server/timer_queue.h	/^class CTimerQueue$/;"	c
+CZString	component/jsoncpp/include/value.h	/^  class CZString {$/;"	c	class:Json::Value
+CZString	component/jsoncpp/src/json_value.cpp	/^Value::CZString::CZString(ArrayIndex index) : cstr_(0), index_(index) {}$/;"	f	class:Json::Value::CZString
+CZString	component/jsoncpp/src/json_value.cpp	/^Value::CZString::CZString(const CZString& other)$/;"	f	class:Json::Value::CZString
+CZString	component/jsoncpp/src/json_value.cpp	/^Value::CZString::CZString(const char* cstr, DuplicationPolicy allocate)$/;"	f	class:Json::Value::CZString
+Char	component/jsoncpp/include/reader.h	/^  typedef char Char;$/;"	t	class:Json::Reader
+ChildValues	component/jsoncpp/include/writer.h	/^  typedef std::vector<std::string> ChildValues;$/;"	t	class:Json::StyledStreamWriter
+ChildValues	component/jsoncpp/include/writer.h	/^  typedef std::vector<std::string> ChildValues;$/;"	t	class:Json::StyledWriter
+ClientMap	component/net/handle.h	/^typedef std::map<int, CClient*> ClientMap; \/\/ key:fd, val:point$/;"	t
+CommentInfo	component/jsoncpp/include/value.h	/^  struct CommentInfo {$/;"	s	class:Json::Value
+CommentInfo	component/jsoncpp/src/json_value.cpp	/^Value::CommentInfo::CommentInfo() : comment_(0) {}$/;"	f	class:Json::Value::CommentInfo
+CommentPlacement	component/jsoncpp/include/value.h	/^enum CommentPlacement {$/;"	g	namespace:Json
+CompareSize	server/main.cpp	/^bool CompareSize(string& s, int size)$/;"	f
+CreateClient	component/net/handle.cpp	/^int CreateClient(int cfd)$/;"	f
+CreateEventLoop	component/net/event.cpp	/^aeEventLoop* CreateEventLoop(int setsize)$/;"	f
+CreateFileEvent	component/net/event.cpp	/^int CreateFileEvent(aeEventLoop* eventLoop, int fd, int mask, aeFileProc* proc, void* clientData)$/;"	f
+CreateTimerfd	server/timer_queue.cpp	/^int CreateTimerfd()$/;"	f
+DeleteFileEvent	component/net/event.cpp	/^void DeleteFileEvent(aeEventLoop* eventLoop, int fd, int mask)$/;"	f
+DestroyClient	component/net/handle.cpp	/^void DestroyClient(int fd)$/;"	f
+DuplicationPolicy	component/jsoncpp/include/value.h	/^    enum DuplicationPolicy {$/;"	g	class:Json::Value::CZString
+ErrorInfo	component/jsoncpp/include/reader.h	/^  class ErrorInfo {$/;"	c	class:Json::Reader
+Errors	component/jsoncpp/include/reader.h	/^  typedef std::deque<ErrorInfo> Errors;$/;"	t	class:Json::Reader
+FastWriter	component/jsoncpp/include/writer.h	/^class JSON_API FastWriter : public Writer {$/;"	c	namespace:Json
+FastWriter	component/jsoncpp/src/json_writer.cpp	/^FastWriter::FastWriter()$/;"	f	class:Json::FastWriter
+Features	component/jsoncpp/include/feature.h	/^class JSON_API Features {$/;"	c	namespace:Json
+Features	component/jsoncpp/src/json_reader.cpp	/^Features::Features()$/;"	f	class:Json::Features
+FuncEach	server/main.cpp	/^void FuncEach(int num)$/;"	f
+GetExpire	server/timer.h	/^    int GetExpire()$/;"	f	class:CTimer
+GetIntArrayFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetIntArrayFromJson(const char* key, std::vector<int>& vecInt)$/;"	f	class:CJsonIntf
+GetIntFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetIntFromJson(const char* key, int& nIntVal, int nDefaultInt)$/;"	f	class:CJsonIntf
+GetObjectArrayFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetObjectArrayFromJson(const char* key, std::vector<Json::Value>& vecJson)$/;"	f	class:CJsonIntf
+GetObjectFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetObjectFromJson(const char* key, Json::Value& jsonVal)$/;"	f	class:CJsonIntf
+GetStringArrayFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetStringArrayFromJson(const char* key, std::vector<std::string>& vecStr)$/;"	f	class:CJsonIntf
+GetStringFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetStringFromJson(const char* key, std::string& nStringVal, std::string& nDefaultString)$/;"	f	class:CJsonIntf
+GetTimerfd	server/timer_queue.h	/^    int  GetTimerfd() { return m_timerfd; }$/;"	f	class:CTimerQueue
+HandleAccept	component/net/handle.cpp	/^int HandleAccept(aeEventLoop* eventLoop, int fd, void* clientData, int mask)$/;"	f
+HandleQuery	component/net/handle.cpp	/^int HandleQuery(aeEventLoop* eventLoop, int fd, void* clientData, int mask)$/;"	f
+HashKey	component/jsoncpp/include/value.h	/^  typedef unsigned int HashKey;$/;"	t	class:Json::ValueInternalMap
+INC_DIR	Makefile	/^INC_DIR = server$/;"	m
+InArgs	component/jsoncpp/include/value.h	/^  typedef std::vector<const PathArgument*> InArgs;$/;"	t	class:Json::Path
+InRange	component/jsoncpp/src/json_value.cpp	/^static inline bool InRange(double d, T min, U max) {$/;"	f	namespace:Json
+InitServer	component/net/handle.cpp	/^int InitServer(int port)$/;"	f
+Instance	component/net/global.cpp	/^CGlobalCfg* CGlobalCfg::Instance()$/;"	f	class:CGlobalCfg
+Int	component/jsoncpp/include/config.h	/^typedef int Int;$/;"	t	namespace:Json
+Int	component/jsoncpp/include/value.h	/^  typedef Json::Int Int;$/;"	t	class:Json::Value
+Int64	component/jsoncpp/include/config.h	/^typedef __int64 Int64;$/;"	t	namespace:Json
+Int64	component/jsoncpp/include/config.h	/^typedef long long int Int64;$/;"	t	namespace:Json
+Int64	component/jsoncpp/include/value.h	/^  typedef Json::Int64 Int64;$/;"	t	class:Json::Value
+InternalFlags	component/jsoncpp/include/value.h	/^  enum InternalFlags {$/;"	g	class:Json::ValueInternalLink
+IsIntegral	component/jsoncpp/src/json_value.cpp	/^static bool IsIntegral(double d) {$/;"	f	namespace:Json
+IsJson	server/jsonintf.cpp	/^bool CJsonIntf::IsJson()$/;"	f	class:CJsonIntf
+IsRepeat	server/timer.h	/^    bool IsRepeat()$/;"	f	class:CTimer
+IsValid	server/timer.h	/^    bool IsValid()$/;"	f	class:CTimer
+IteratorState	component/jsoncpp/include/value.h	/^    IteratorState() : array_(0), currentPageIndex_(0), currentItemIndex_(0) {}$/;"	f	struct:Json::ValueInternalArray::IteratorState
+IteratorState	component/jsoncpp/include/value.h	/^    IteratorState() : map_(0), link_(0), itemIndex_(0), bucketIndex_(0) {}$/;"	f	struct:Json::ValueInternalMap::IteratorState
+IteratorState	component/jsoncpp/include/value.h	/^  struct IteratorState \/\/ Must be a POD$/;"	s	class:Json::ValueInternalArray
+IteratorState	component/jsoncpp/include/value.h	/^  struct IteratorState {$/;"	s	class:Json::ValueInternalMap
+JSONCPP_BATCHALLOCATOR_H_INCLUDED	component/jsoncpp/src/json_batchallocator.h	7;"	d
+JSONCPP_DEPRECATED	component/jsoncpp/include/config.h	83;"	d
+JSONCPP_DEPRECATED	component/jsoncpp/include/config.h	87;"	d
+JSONCPP_DISABLE_DLL_INTERFACE_WARNING	component/jsoncpp/include/config.h	53;"	d
+JSONCPP_DISABLE_DLL_INTERFACE_WARNING	component/jsoncpp/include/config.h	58;"	d
+JSONCPP_VERSION_HEXA	component/jsoncpp/include/version.h	12;"	d
+JSONCPP_VERSION_MAJOR	component/jsoncpp/include/version.h	8;"	d
+JSONCPP_VERSION_MINOR	component/jsoncpp/include/version.h	9;"	d
+JSONCPP_VERSION_PATCH	component/jsoncpp/include/version.h	10;"	d
+JSONCPP_VERSION_QUALIFIER	component/jsoncpp/include/version.h	11;"	d
+JSONCPP_VERSION_STRING	component/jsoncpp/include/version.h	7;"	d
+JSON_API	component/jsoncpp/include/config.h	49;"	d
+JSON_API	component/jsoncpp/include/config.h	52;"	d
+JSON_API	component/jsoncpp/include/config.h	57;"	d
+JSON_API	component/jsoncpp/include/config.h	62;"	d
+JSON_ASSERT	component/jsoncpp/include/assertions.h	17;"	d
+JSON_ASSERT	component/jsoncpp/include/assertions.h	21;"	d
+JSON_ASSERT_MESSAGE	component/jsoncpp/include/assertions.h	36;"	d
+JSON_ASSERT_UNREACHABLE	component/jsoncpp/src/json_value.cpp	24;"	d	file:
+JSON_AUTOLINK_H_INCLUDED	component/jsoncpp/include/autolink.h	7;"	d
+JSON_CONFIG_H_INCLUDED	component/jsoncpp/include/config.h	7;"	d
+JSON_FAIL_MESSAGE	component/jsoncpp/include/assertions.h	19;"	d
+JSON_FAIL_MESSAGE	component/jsoncpp/include/assertions.h	27;"	d
+JSON_FORWARDS_H_INCLUDED	component/jsoncpp/include/forwards.h	7;"	d
+JSON_HAS_INT64	component/jsoncpp/include/config.h	108;"	d
+JSON_HAS_INT64	component/jsoncpp/include/config.h	96;"	d
+JSON_JSON_H_INCLUDED	component/jsoncpp/include/json.h	7;"	d
+JSON_USE_CPPTL	component/jsoncpp/include/config.h	44;"	d
+JSON_USE_EXCEPTION	component/jsoncpp/include/config.h	33;"	d
+JSON_USE_INT64_DOUBLE_CONVERSION	component/jsoncpp/include/config.h	73;"	d
+JSON_VERSION_H_INCLUDED	component/jsoncpp/include/version.h	5;"	d
+JSON_WRITER_H_INCLUDED	component/jsoncpp/include/writer.h	7;"	d
+Json	component/jsoncpp/include/config.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/include/feature.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/include/forwards.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/include/reader.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/include/value.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/include/writer.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/src/json_batchallocator.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/src/json_reader.cpp	/^namespace Json {$/;"	n	file:
+Json	component/jsoncpp/src/json_tool.h	/^namespace Json {$/;"	n
+Json	component/jsoncpp/src/json_value.cpp	/^namespace Json {$/;"	n	file:
+Json	component/jsoncpp/src/json_writer.cpp	/^namespace Json {$/;"	n	file:
+JsonToString	server/jsonintf.cpp	/^std::string CJsonIntf::JsonToString()$/;"	f	class:CJsonIntf
+Kind	component/jsoncpp/include/value.h	/^  enum Kind {$/;"	g	class:Json::PathArgument
+LIB_JSONCPP_JSON_TOOL_H_INCLUDED	component/jsoncpp/src/json_tool.h	7;"	d
+LIB_MEMCACHE	Makefile	/^LIB_MEMCACHE := OFF$/;"	m
+LIB_MYSQL	Makefile	/^LIB_MYSQL :=  OFF$/;"	m
+LargestInt	component/jsoncpp/include/config.h	/^typedef Int64 LargestInt;$/;"	t	namespace:Json
+LargestInt	component/jsoncpp/include/config.h	/^typedef int LargestInt;$/;"	t	namespace:Json
+LargestInt	component/jsoncpp/include/value.h	/^  typedef Json::LargestInt LargestInt;$/;"	t	class:Json::Value
+LargestUInt	component/jsoncpp/include/config.h	/^typedef UInt64 LargestUInt;$/;"	t	namespace:Json
+LargestUInt	component/jsoncpp/include/config.h	/^typedef unsigned int LargestUInt;$/;"	t	namespace:Json
+LargestUInt	component/jsoncpp/include/value.h	/^  typedef Json::LargestUInt LargestUInt;$/;"	t	class:Json::Value
+LoadCfg	component/net/global.cpp	/^void CGlobalCfg::LoadCfg(const char* host, int port)$/;"	f	class:CGlobalCfg
+Location	component/jsoncpp/include/reader.h	/^  typedef const Char* Location;$/;"	t	class:Json::Reader
+MAX_EVENT_NUM	component/net/event.h	7;"	d
+MainLoop	component/net/event.cpp	/^void MainLoop(aeEventLoop* eventLoop)$/;"	f
+Members	component/jsoncpp/include/value.h	/^  typedef std::vector<std::string> Members;$/;"	t	class:Json::Value
+Nodes	component/jsoncpp/include/reader.h	/^  typedef std::stack<Value*> Nodes;$/;"	t	class:Json::Reader
+OBJ_DIR	component/makefile	/^OBJ_DIR=obj$/;"	m
+OBJ_PATH	Makefile	/^OBJ_PATH = obj$/;"	m
+ObjectValues	component/jsoncpp/include/value.h	/^  typedef CppTL::SmallMap<CZString, Value> ObjectValues;$/;"	t	class:Json::Value
+ObjectValues	component/jsoncpp/include/value.h	/^  typedef std::map<CZString, Value> ObjectValues;$/;"	t	class:Json::Value
+OnConnected	component/net/handle.cpp	/^void CClient::OnConnected()$/;"	f	class:CClient
+PageIndex	component/jsoncpp/include/value.h	/^  typedef unsigned int PageIndex;$/;"	t	class:Json::ValueInternalArray
+Path	component/jsoncpp/include/value.h	/^class JSON_API Path {$/;"	c	namespace:Json
+Path	component/jsoncpp/src/json_value.cpp	/^Path::Path(const std::string& path,$/;"	f	class:Json::Path
+PathArgument	component/jsoncpp/include/value.h	/^class JSON_API PathArgument {$/;"	c	namespace:Json
+PathArgument	component/jsoncpp/src/json_value.cpp	/^PathArgument::PathArgument() : key_(), index_(), kind_(kindNone) {}$/;"	f	class:Json::PathArgument
+PathArgument	component/jsoncpp/src/json_value.cpp	/^PathArgument::PathArgument(ArrayIndex index)$/;"	f	class:Json::PathArgument
+PathArgument	component/jsoncpp/src/json_value.cpp	/^PathArgument::PathArgument(const char* key)$/;"	f	class:Json::PathArgument
+PathArgument	component/jsoncpp/src/json_value.cpp	/^PathArgument::PathArgument(const std::string& key)$/;"	f	class:Json::PathArgument
+PrintValueTree	server/jsonintf.cpp	/^void CJsonIntf::PrintValueTree(void)$/;"	f	class:CJsonIntf
+ProcessEvent	component/net/event.cpp	/^int ProcessEvent(aeEventLoop* eventLoop)$/;"	f
+ProcessExpire	server/timer_queue.cpp	/^void CTimerQueue::ProcessExpire()$/;"	f	class:CTimerQueue
+ProcessFileEvent	component/net/event.cpp	/^int ProcessFileEvent(aeEventLoop* eventLoop)$/;"	f
+ProcessQuery	component/net/handle.cpp	/^int CClient::ProcessQuery()$/;"	f	class:CClient
+ProcessTimeEvent	component/net/event.cpp	/^int ProcessTimeEvent(aeEventLoop* eventLoop)$/;"	f
+ReadTimerfd	server/timer_queue.cpp	/^void ReadTimerfd(int timerfd)$/;"	f
+Reader	component/jsoncpp/include/reader.h	/^class JSON_API Reader {$/;"	c	namespace:Json
+Reader	component/jsoncpp/src/json_reader.cpp	/^Reader::Reader()$/;"	f	class:Json::Reader
+Reader	component/jsoncpp/src/json_reader.cpp	/^Reader::Reader(const Features& features)$/;"	f	class:Json::Reader
+ResetTimerfd	server/timer_queue.cpp	/^void ResetTimerfd(int timerfd, int expire)$/;"	f
+Restart	server/timer.h	/^    void Restart(int now)$/;"	f	class:CTimer
+Run	server/timer.cpp	/^void CTimer::Run()$/;"	f	class:CTimer
+RunAfter	server/timer_queue.cpp	/^void CTimerQueue::RunAfter(TimerCallback& cb, int delay, int interval)$/;"	f	class:CTimerQueue
+RunAt	server/timer_queue.cpp	/^void CTimerQueue::RunAt(TimerCallback& cb, int when, int interval)$/;"	f	class:CTimerQueue
+SRC_DIR	Makefile	/^SRC_DIR = server$/;"	m
+SelfType	component/jsoncpp/include/value.h	/^  typedef ValueConstIterator SelfType;$/;"	t	class:Json::ValueConstIterator
+SelfType	component/jsoncpp/include/value.h	/^  typedef ValueIterator SelfType;$/;"	t	class:Json::ValueIterator
+SelfType	component/jsoncpp/include/value.h	/^  typedef ValueIteratorBase SelfType;$/;"	t	class:Json::ValueIteratorBase
+SendToClient	component/net/handle.cpp	/^int CClient::SendToClient(const char* buf, int len)$/;"	f	class:CClient
+StaticString	component/jsoncpp/include/value.h	/^  explicit StaticString(const char* czstring) : str_(czstring) {}$/;"	f	class:Json::StaticString
+StaticString	component/jsoncpp/include/value.h	/^class JSON_API StaticString {$/;"	c	namespace:Json
+StructuredError	component/jsoncpp/include/reader.h	/^  struct StructuredError {$/;"	s	class:Json::Reader
+StyledStreamWriter	component/jsoncpp/include/writer.h	/^class JSON_API StyledStreamWriter {$/;"	c	namespace:Json
+StyledStreamWriter	component/jsoncpp/src/json_writer.cpp	/^StyledStreamWriter::StyledStreamWriter(std::string indentation)$/;"	f	class:Json::StyledStreamWriter
+StyledWriter	component/jsoncpp/include/writer.h	/^class JSON_API StyledWriter : public Writer {$/;"	c	namespace:Json
+StyledWriter	component/jsoncpp/src/json_writer.cpp	/^StyledWriter::StyledWriter()$/;"	f	class:Json::StyledWriter
+TARGET	component/makefile	/^TARGET=libccreactor.a$/;"	m
+TARGET_PATH	component/makefile	/^TARGET_PATH=lib$/;"	m
+TEST_DEBUG	component/net/global.cpp	5;"	d	file:
+TEST_DENUG	component/net/event.cpp	8;"	d	file:
+TestAlgorithm	server/main.cpp	/^void TestAlgorithm()$/;"	f
+TestBinSearch	server/main.cpp	/^void TestBinSearch()$/;"	f
+TestBind	server/main.cpp	/^void TestBind()$/;"	f
+TestBindFunction	server/main.cpp	/^void TestBindFunction(void)$/;"	f
+TestErase	server/main.cpp	/^void TestErase()$/;"	f
+TestForeach	server/main.cpp	/^void TestForeach()$/;"	f
+TestInsert	server/main.cpp	/^void TestInsert()$/;"	f
+TestIterator	server/main.cpp	/^void TestIterator()$/;"	f
+TestJson	server/jsonintf.cpp	/^void TestJson(void)$/;"	f
+TestMap	server/main.cpp	/^void TestMap()$/;"	f
+TestMapCompare	server/main.cpp	/^void TestMapCompare()$/;"	f
+TestMemFuncConst	server/main.cpp	/^void TestMemFuncConst()$/;"	f
+TestRefConst	server/main.cpp	/^void TestRefConst()$/;"	f
+TestRefReturn	server/main.cpp	/^void TestRefReturn()$/;"	f
+TestSet	server/main.cpp	/^void TestSet()$/;"	f
+TestTimeCallback	server/main.cpp	/^void TestTimeCallback(string& name)$/;"	f
+TestTimer	server/main.cpp	/^void TestTimer()$/;"	f
+TestUpper	server/main.cpp	/^void TestUpper()$/;"	f
+TestVector	server/main.cpp	/^void TestVector()$/;"	f
+TimeEntry	server/timer_queue.h	/^typedef std::pair<int,CTimer*> TimeEntry;$/;"	t
+TimerCallback	server/timer.h	/^typedef std::function<void()> TimerCallback;$/;"	t
+TimerSet	server/timer_queue.h	/^typedef std::set<TimeEntry> TimerSet;$/;"	t
+Token	component/jsoncpp/include/reader.h	/^  class Token {$/;"	c	class:Json::Reader
+TokenType	component/jsoncpp/include/reader.h	/^  enum TokenType {$/;"	g	class:Json::Reader
+UInt	component/jsoncpp/include/config.h	/^typedef unsigned int UInt;$/;"	t	namespace:Json
+UInt	component/jsoncpp/include/value.h	/^  typedef Json::UInt UInt;$/;"	t	class:Json::Value
+UInt64	component/jsoncpp/include/config.h	/^typedef unsigned __int64 UInt64;$/;"	t	namespace:Json
+UInt64	component/jsoncpp/include/config.h	/^typedef unsigned long long int UInt64;$/;"	t	namespace:Json
+UInt64	component/jsoncpp/include/value.h	/^  typedef Json::UInt64 UInt64;$/;"	t	class:Json::Value
+UIntToStringBuffer	component/jsoncpp/src/json_tool.h	/^typedef char UIntToStringBuffer[uintToStringBufferSize];$/;"	t	namespace:Json
+Value	component/jsoncpp/include/value.h	/^class JSON_API Value {$/;"	c	namespace:Json
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(Int value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(Int64 value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(UInt value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(UInt64 value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(ValueType type) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(bool value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(const CppTL::ConstString& value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(const StaticString& value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(const Value& other)$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(const char* beginValue, const char* endValue) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(const char* value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(const std::string& value) {$/;"	f	class:Json::Value
+Value	component/jsoncpp/src/json_value.cpp	/^Value::Value(double value) {$/;"	f	class:Json::Value
+ValueArrayAllocator	component/jsoncpp/include/value.h	/^class JSON_API ValueArrayAllocator {$/;"	c	namespace:Json
+ValueConstIterator	component/jsoncpp/include/value.h	/^class JSON_API ValueConstIterator : public ValueIteratorBase {$/;"	c	namespace:Json
+ValueHolder	component/jsoncpp/include/value.h	/^  union ValueHolder {$/;"	u	class:Json::Value
+ValueInternalArray	component/jsoncpp/include/value.h	/^class JSON_API ValueInternalArray {$/;"	c	namespace:Json
+ValueInternalLink	component/jsoncpp/include/value.h	/^class JSON_API ValueInternalLink {$/;"	c	namespace:Json
+ValueInternalMap	component/jsoncpp/include/value.h	/^class JSON_API ValueInternalMap {$/;"	c	namespace:Json
+ValueIterator	component/jsoncpp/include/value.h	/^class JSON_API ValueIterator : public ValueIteratorBase {$/;"	c	namespace:Json
+ValueIteratorBase	component/jsoncpp/include/value.h	/^class JSON_API ValueIteratorBase {$/;"	c	namespace:Json
+ValueMapAllocator	component/jsoncpp/include/value.h	/^class JSON_API ValueMapAllocator {$/;"	c	namespace:Json
+ValueType	component/jsoncpp/include/value.h	/^enum ValueType {$/;"	g	namespace:Json
+Writer	component/jsoncpp/include/writer.h	/^class JSON_API Writer {$/;"	c	namespace:Json
+__AE_EPOLL_H_	component/net/ae_epoll.h	2;"	d
+__EVENT_H__	component/net/event.h	2;"	d
+__GLOBAL_H__	component/net/global.h	2;"	d
+__HANDLE_H__	component/net/handle.h	2;"	d
+__JSON_INTF_H__	server/jsonintf.h	2;"	d
+__TIMER_H__	server/timer.h	2;"	d
+__TIMER_QUEUE_H__	server/timer_queue.h	2;"	d
+acted	component/net/event.h	/^    aeActedEvent *acted;$/;"	m	struct:aeEventLoop
+addChildValues_	component/jsoncpp/include/writer.h	/^  bool addChildValues_;$/;"	m	class:Json::StyledStreamWriter
+addChildValues_	component/jsoncpp/include/writer.h	/^  bool addChildValues_;$/;"	m	class:Json::StyledWriter
+addComment	component/jsoncpp/src/json_reader.cpp	/^Reader::addComment(Location begin, Location end, CommentPlacement placement) {$/;"	f	class:Json::Reader
+addError	component/jsoncpp/src/json_reader.cpp	/^Reader::addError(const std::string& message, Token& token, Location extra) {$/;"	f	class:Json::Reader
+addErrorAndRecover	component/jsoncpp/src/json_reader.cpp	/^bool Reader::addErrorAndRecover(const std::string& message,$/;"	f	class:Json::Reader
+addPathInArg	component/jsoncpp/src/json_value.cpp	/^void Path::addPathInArg(const std::string& \/*path*\/,$/;"	f	class:Json::Path
+aeActedEvent	component/net/event.h	/^typedef struct aeActedEvent {$/;"	s
+aeActedEvent	component/net/event.h	/^} aeActedEvent;$/;"	t	typeref:struct:aeActedEvent
+aeApiAddEvent	component/net/ae_epoll.cpp	/^int aeApiAddEvent(aeEventLoop *eventLoop, int fd, int mask) $/;"	f
+aeApiCreate	component/net/ae_epoll.cpp	/^int aeApiCreate(aeEventLoop *eventLoop) $/;"	f
+aeApiDelEvent	component/net/ae_epoll.cpp	/^void aeApiDelEvent(aeEventLoop *eventLoop, int fd, int delmask) $/;"	f
+aeApiFree	component/net/ae_epoll.cpp	/^void aeApiFree(aeEventLoop *eventLoop) $/;"	f
+aeApiName	component/net/ae_epoll.cpp	/^char *aeApiName(void) $/;"	f
+aeApiPoll	component/net/ae_epoll.cpp	/^int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp) {$/;"	f
+aeApiResize	component/net/ae_epoll.cpp	/^int aeApiResize(aeEventLoop *eventLoop, int setsize) $/;"	f
+aeApiState	component/net/ae_epoll.h	/^typedef struct aeApiState {$/;"	s
+aeApiState	component/net/ae_epoll.h	/^} aeApiState;$/;"	t	typeref:struct:aeApiState
+aeEventLoop	component/net/event.h	/^typedef struct aeEventLoop {$/;"	s
+aeEventLoop	component/net/event.h	/^} aeEventLoop;$/;"	t	typeref:struct:aeEventLoop
+aeFileEvent	component/net/event.h	/^typedef struct aeFileEvent {$/;"	s
+aeFileEvent	component/net/event.h	/^} aeFileEvent;$/;"	t	typeref:struct:aeFileEvent
+aeFileProc	component/net/event.h	/^typedef int aeFileProc(struct aeEventLoop *eventLoop, int fd, void *clientData, int mask);$/;"	t
+all	component/jsoncpp/src/json_reader.cpp	/^Features Features::all() { return Features(); }$/;"	f	class:Json::Features
+allocate	component/jsoncpp/src/json_batchallocator.h	/^  AllocatedType* allocate() {$/;"	f	class:Json::BatchAllocator
+allocateBatch	component/jsoncpp/src/json_batchallocator.h	/^  static BatchInfo* allocateBatch(unsigned int objectsPerPage) {$/;"	f	class:Json::BatchAllocator
+allowComments_	component/jsoncpp/include/feature.h	/^  bool allowComments_;$/;"	m	class:Json::Features
+allowDroppedNullPlaceholders_	component/jsoncpp/include/feature.h	/^  bool allowDroppedNullPlaceholders_;$/;"	m	class:Json::Features
+allowNumericKeys_	component/jsoncpp/include/feature.h	/^  bool allowNumericKeys_;$/;"	m	class:Json::Features
+apidata	component/net/event.h	/^    void *apidata; \/* This is used for polling API specific data *\/$/;"	m	struct:aeEventLoop
+append	component/jsoncpp/src/json_value.cpp	/^Value& Value::append(const Value& value) { return (*this)[size()] = value; }$/;"	f	class:Json::Value
+args_	component/jsoncpp/include/value.h	/^  Args args_;$/;"	m	class:Json::Path
+arrayValue	component/jsoncpp/include/value.h	/^  arrayValue,    \/\/\/< array value (ordered list)$/;"	e	enum:Json::ValueType
+array_	component/jsoncpp/include/value.h	/^    ValueInternalArray* array_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
+array_	component/jsoncpp/include/value.h	/^    ValueInternalArray* array_;$/;"	m	union:Json::Value::ValueHolder
+array_	component/jsoncpp/include/value.h	/^    ValueInternalArray::IteratorState array_;$/;"	m	union:Json::ValueIteratorBase::__anon3
+asBool	component/jsoncpp/src/json_value.cpp	/^bool Value::asBool() const {$/;"	f	class:Json::Value
+asCString	component/jsoncpp/src/json_value.cpp	/^const char* Value::asCString() const {$/;"	f	class:Json::Value
+asConstString	component/jsoncpp/src/json_value.cpp	/^CppTL::ConstString Value::asConstString() const {$/;"	f	class:Json::Value
+asDouble	component/jsoncpp/src/json_value.cpp	/^double Value::asDouble() const {$/;"	f	class:Json::Value
+asFloat	component/jsoncpp/src/json_value.cpp	/^float Value::asFloat() const {$/;"	f	class:Json::Value
+asInt	component/jsoncpp/src/json_value.cpp	/^Value::Int Value::asInt() const {$/;"	f	class:Json::Value
+asInt64	component/jsoncpp/src/json_value.cpp	/^Value::Int64 Value::asInt64() const {$/;"	f	class:Json::Value
+asLargestInt	component/jsoncpp/src/json_value.cpp	/^LargestInt Value::asLargestInt() const {$/;"	f	class:Json::Value
+asLargestUInt	component/jsoncpp/src/json_value.cpp	/^LargestUInt Value::asLargestUInt() const {$/;"	f	class:Json::Value
+asString	component/jsoncpp/src/json_value.cpp	/^std::string Value::asString() const {$/;"	f	class:Json::Value
+asUInt	component/jsoncpp/src/json_value.cpp	/^Value::UInt Value::asUInt() const {$/;"	f	class:Json::Value
+asUInt64	component/jsoncpp/src/json_value.cpp	/^Value::UInt64 Value::asUInt64() const {$/;"	f	class:Json::Value
+batches_	component/jsoncpp/src/json_batchallocator.h	/^  BatchInfo* batches_;$/;"	m	class:Json::BatchAllocator
+begin	component/jsoncpp/src/json_value.cpp	/^Value::const_iterator Value::begin() const {$/;"	f	class:Json::Value
+begin	component/jsoncpp/src/json_value.cpp	/^Value::iterator Value::begin() {$/;"	f	class:Json::Value
+begin_	component/jsoncpp/include/reader.h	/^  Location begin_;$/;"	m	class:Json::Reader
+bool_	component/jsoncpp/include/value.h	/^    bool bool_;$/;"	m	union:Json::Value::ValueHolder
+booleanValue	component/jsoncpp/include/value.h	/^  booleanValue,  \/\/\/< bool value$/;"	e	enum:Json::ValueType
+bucketIndex_	component/jsoncpp/include/value.h	/^    BucketIndex bucketIndex_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+bucketsSize_	component/jsoncpp/include/value.h	/^  BucketIndex bucketsSize_;$/;"	m	class:Json::ValueInternalMap
+buckets_	component/jsoncpp/include/value.h	/^  ValueInternalLink* buckets_;$/;"	m	class:Json::ValueInternalMap
+buffer_	component/jsoncpp/src/json_batchallocator.h	/^    AllocatedType buffer_[objectPerAllocation];$/;"	m	struct:Json::BatchAllocator::BatchInfo
+c_str	component/jsoncpp/include/value.h	/^  const char* c_str() const { return str_; }$/;"	f	class:Json::StaticString
+c_str	component/jsoncpp/src/json_value.cpp	/^const char* Value::CZString::c_str() const { return cstr_; }$/;"	f	class:Json::Value::CZString
+childValues_	component/jsoncpp/include/writer.h	/^  ChildValues childValues_;$/;"	m	class:Json::StyledStreamWriter
+childValues_	component/jsoncpp/include/writer.h	/^  ChildValues childValues_;$/;"	m	class:Json::StyledWriter
+clear	component/jsoncpp/src/json_value.cpp	/^void Value::clear() {$/;"	f	class:Json::Value
+clientData	component/net/event.h	/^    void *clientData;$/;"	m	struct:aeFileEvent
+codePointToUTF8	component/jsoncpp/src/json_tool.h	/^static inline std::string codePointToUTF8(unsigned int cp) {$/;"	f	namespace:Json
+collectComments_	component/jsoncpp/include/reader.h	/^  bool collectComments_;$/;"	m	class:Json::Reader
+commentAfter	component/jsoncpp/include/value.h	/^  commentAfter, \/\/\/< a comment on the line after a value (only make sense for$/;"	e	enum:Json::CommentPlacement
+commentAfterOnSameLine	component/jsoncpp/include/value.h	/^  commentAfterOnSameLine, \/\/\/< a comment just after a value on the same line$/;"	e	enum:Json::CommentPlacement
+commentBefore	component/jsoncpp/include/value.h	/^  commentBefore = 0,      \/\/\/< a comment placed on the line before a value$/;"	e	enum:Json::CommentPlacement
+comment_	component/jsoncpp/include/value.h	/^    char* comment_;$/;"	m	struct:Json::Value::CommentInfo
+commentsBefore_	component/jsoncpp/include/reader.h	/^  std::string commentsBefore_;$/;"	m	class:Json::Reader
+comments_	component/jsoncpp/include/value.h	/^  CommentInfo* comments_;$/;"	m	class:Json::Value
+compare	component/jsoncpp/src/json_value.cpp	/^int Value::compare(const Value& other) const {$/;"	f	class:Json::Value
+const_iterator	component/jsoncpp/include/value.h	/^  typedef ValueConstIterator const_iterator;$/;"	t	class:Json::Value
+containsControlCharacter	component/jsoncpp/src/json_writer.cpp	/^static bool containsControlCharacter(const char* str) {$/;"	f	namespace:Json
+containsNewLine	component/jsoncpp/src/json_reader.cpp	/^static bool containsNewLine(Reader::Location begin, Reader::Location end) {$/;"	f	namespace:Json
+cstr_	component/jsoncpp/include/value.h	/^    const char* cstr_;$/;"	m	class:Json::Value::CZString
+currentBatch_	component/jsoncpp/src/json_batchallocator.h	/^  BatchInfo* currentBatch_;$/;"	m	class:Json::BatchAllocator
+currentItemIndex_	component/jsoncpp/include/value.h	/^    unsigned int currentItemIndex_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
+currentPageIndex_	component/jsoncpp/include/value.h	/^    Value** currentPageIndex_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
+currentValue	component/jsoncpp/src/json_reader.cpp	/^Value& Reader::currentValue() { return *(nodes_.top()); }$/;"	f	class:Json::Reader
+current_	component/jsoncpp/include/reader.h	/^  Location current_;$/;"	m	class:Json::Reader
+current_	component/jsoncpp/include/value.h	/^  Value::ObjectValues::iterator current_;$/;"	m	class:Json::ValueIteratorBase
+decodeDouble	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeDouble(Token& token) {$/;"	f	class:Json::Reader
+decodeDouble	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeDouble(Token& token, Value& decoded) {$/;"	f	class:Json::Reader
+decodeNumber	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeNumber(Token& token) {$/;"	f	class:Json::Reader
+decodeNumber	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeNumber(Token& token, Value& decoded) {$/;"	f	class:Json::Reader
+decodeString	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeString(Token& token) {$/;"	f	class:Json::Reader
+decodeString	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeString(Token& token, std::string& decoded) {$/;"	f	class:Json::Reader
+decodeUnicodeCodePoint	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeUnicodeCodePoint(Token& token,$/;"	f	class:Json::Reader
+decodeUnicodeEscapeSequence	component/jsoncpp/src/json_reader.cpp	/^bool Reader::decodeUnicodeEscapeSequence(Token& token,$/;"	f	class:Json::Reader
+difference_type	component/jsoncpp/include/value.h	/^  typedef int difference_type;$/;"	t	class:Json::ValueConstIterator
+difference_type	component/jsoncpp/include/value.h	/^  typedef int difference_type;$/;"	t	class:Json::ValueIterator
+difference_type	component/jsoncpp/include/value.h	/^  typedef int difference_type;$/;"	t	class:Json::ValueIteratorBase
+document_	component/jsoncpp/include/reader.h	/^  std::string document_;$/;"	m	class:Json::Reader
+document_	component/jsoncpp/include/writer.h	/^  std::ostream* document_;$/;"	m	class:Json::StyledStreamWriter
+document_	component/jsoncpp/include/writer.h	/^  std::string document_;$/;"	m	class:Json::FastWriter
+document_	component/jsoncpp/include/writer.h	/^  std::string document_;$/;"	m	class:Json::StyledWriter
+dropNullPlaceholders	component/jsoncpp/src/json_writer.cpp	/^void FastWriter::dropNullPlaceholders() { dropNullPlaceholders_ = true; }$/;"	f	class:Json::FastWriter
+dropNullPlaceholders_	component/jsoncpp/include/writer.h	/^  bool dropNullPlaceholders_;$/;"	m	class:Json::FastWriter
+duplicate	component/jsoncpp/include/value.h	/^      duplicate,$/;"	e	enum:Json::Value::CZString::DuplicationPolicy
+duplicateOnCopy	component/jsoncpp/include/value.h	/^      duplicateOnCopy$/;"	e	enum:Json::Value::CZString::DuplicationPolicy
+duplicateStringValue	component/jsoncpp/src/json_value.cpp	/^static inline char* duplicateStringValue(const char* value,$/;"	f	namespace:Json
+empty	component/jsoncpp/src/json_value.cpp	/^bool Value::empty() const {$/;"	f	class:Json::Value
+enableYAMLCompatibility	component/jsoncpp/src/json_writer.cpp	/^void FastWriter::enableYAMLCompatibility() { yamlCompatiblityEnabled_ = true; }$/;"	f	class:Json::FastWriter
+end	component/jsoncpp/src/json_value.cpp	/^Value::const_iterator Value::end() const {$/;"	f	class:Json::Value
+end	component/jsoncpp/src/json_value.cpp	/^Value::iterator Value::end() {$/;"	f	class:Json::Value
+end_	component/jsoncpp/include/reader.h	/^    Location end_;$/;"	m	class:Json::Reader::Token
+end_	component/jsoncpp/include/reader.h	/^  Location end_;$/;"	m	class:Json::Reader
+end_	component/jsoncpp/src/json_batchallocator.h	/^    AllocatedType* end_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+epfd	component/net/ae_epoll.h	/^    int epfd;$/;"	m	struct:aeApiState
+errors_	component/jsoncpp/include/reader.h	/^  Errors errors_;$/;"	m	class:Json::Reader
+events	component/net/ae_epoll.h	/^    struct epoll_event *events;$/;"	m	struct:aeApiState	typeref:struct:aeApiState::epoll_event
+events	component/net/event.h	/^    aeFileEvent *events; \/* Registered events *\/$/;"	m	struct:aeEventLoop
+expectToken	component/jsoncpp/src/json_reader.cpp	/^bool Reader::expectToken(TokenType type, Token& token, const char* message) {$/;"	f	class:Json::Reader
+extra_	component/jsoncpp/include/reader.h	/^    Location extra_;$/;"	m	class:Json::Reader::ErrorInfo
+fd	component/net/event.h	/^    int fd;$/;"	m	struct:aeActedEvent
+features_	component/jsoncpp/include/reader.h	/^  Features features_;$/;"	m	class:Json::Reader
+fixNumericLocale	component/jsoncpp/src/json_tool.h	/^static inline void fixNumericLocale(char* begin, char* end) {$/;"	f	namespace:Json
+flagAvailable	component/jsoncpp/include/value.h	/^    flagAvailable = 0,$/;"	e	enum:Json::ValueInternalLink::InternalFlags
+flagUsed	component/jsoncpp/include/value.h	/^    flagUsed = 1$/;"	e	enum:Json::ValueInternalLink::InternalFlags
+freeHead_	component/jsoncpp/src/json_batchallocator.h	/^  AllocatedType* freeHead_;$/;"	m	class:Json::BatchAllocator
+get	component/jsoncpp/src/json_value.cpp	/^Value Value::get(ArrayIndex index, const Value& defaultValue) const {$/;"	f	class:Json::Value
+get	component/jsoncpp/src/json_value.cpp	/^Value Value::get(const CppTL::ConstString& key,$/;"	f	class:Json::Value
+get	component/jsoncpp/src/json_value.cpp	/^Value Value::get(const char* key, const Value& defaultValue) const {$/;"	f	class:Json::Value
+get	component/jsoncpp/src/json_value.cpp	/^Value Value::get(const std::string& key, const Value& defaultValue) const {$/;"	f	class:Json::Value
+getComment	component/jsoncpp/src/json_value.cpp	/^std::string Value::getComment(CommentPlacement placement) const {$/;"	f	class:Json::Value
+getFormatedErrorMessages	component/jsoncpp/src/json_reader.cpp	/^std::string Reader::getFormatedErrorMessages() const {$/;"	f	class:Json::Reader
+getFormattedErrorMessages	component/jsoncpp/src/json_reader.cpp	/^std::string Reader::getFormattedErrorMessages() const {$/;"	f	class:Json::Reader
+getLocationLineAndColumn	component/jsoncpp/src/json_reader.cpp	/^std::string Reader::getLocationLineAndColumn(Location location) const {$/;"	f	class:Json::Reader
+getLocationLineAndColumn	component/jsoncpp/src/json_reader.cpp	/^void Reader::getLocationLineAndColumn(Location location,$/;"	f	class:Json::Reader
+getMemberNames	component/jsoncpp/src/json_value.cpp	/^Value::Members Value::getMemberNames() const {$/;"	f	class:Json::Value
+getNextChar	component/jsoncpp/src/json_reader.cpp	/^Reader::Char Reader::getNextChar() {$/;"	f	class:Json::Reader
+getOffsetLimit	component/jsoncpp/src/json_value.cpp	/^size_t Value::getOffsetLimit() const { return limit_; }$/;"	f	class:Json::Value
+getOffsetStart	component/jsoncpp/src/json_value.cpp	/^size_t Value::getOffsetStart() const { return start_; }$/;"	f	class:Json::Value
+getStructuredErrors	component/jsoncpp/src/json_reader.cpp	/^std::vector<Reader::StructuredError> Reader::getStructuredErrors() const {$/;"	f	class:Json::Reader
+good	component/jsoncpp/src/json_reader.cpp	/^bool Reader::good() const {$/;"	f	class:Json::Reader
+hasComment	component/jsoncpp/src/json_value.cpp	/^bool Value::hasComment(CommentPlacement placement) const {$/;"	f	class:Json::Value
+hasCommentForValue	component/jsoncpp/src/json_writer.cpp	/^bool StyledStreamWriter::hasCommentForValue(const Value& value) {$/;"	f	class:Json::StyledStreamWriter
+hasCommentForValue	component/jsoncpp/src/json_writer.cpp	/^bool StyledWriter::hasCommentForValue(const Value& value) {$/;"	f	class:Json::StyledWriter
+in	component/jsoncpp/src/json_reader.cpp	/^static inline bool in(Reader::Char c,$/;"	f	namespace:Json
+indent	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::indent() { indentString_ += indentation_; }$/;"	f	class:Json::StyledStreamWriter
+indent	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::indent() { indentString_ += std::string(indentSize_, ' '); }$/;"	f	class:Json::StyledWriter
+indentSize_	component/jsoncpp/include/writer.h	/^  int indentSize_;$/;"	m	class:Json::StyledWriter
+indentString_	component/jsoncpp/include/writer.h	/^  std::string indentString_;$/;"	m	class:Json::StyledStreamWriter
+indentString_	component/jsoncpp/include/writer.h	/^  std::string indentString_;$/;"	m	class:Json::StyledWriter
+indentation_	component/jsoncpp/include/writer.h	/^  std::string indentation_;$/;"	m	class:Json::StyledStreamWriter
+index	component/jsoncpp/src/json_value.cpp	/^ArrayIndex Value::CZString::index() const { return index_; }$/;"	f	class:Json::Value::CZString
+index_	component/jsoncpp/include/value.h	/^    ArrayIndex index_;$/;"	m	class:Json::Value::CZString
+index_	component/jsoncpp/include/value.h	/^  ArrayIndex index_;$/;"	m	class:Json::PathArgument
+initBasic	component/jsoncpp/src/json_value.cpp	/^void Value::initBasic(ValueType type, bool allocated) {$/;"	f	class:Json::Value
+intValue	component/jsoncpp/include/value.h	/^  intValue,      \/\/\/< signed integer value$/;"	e	enum:Json::ValueType
+int_	component/jsoncpp/include/value.h	/^    LargestInt int_;$/;"	m	union:Json::Value::ValueHolder
+integerToDouble	component/jsoncpp/src/json_value.cpp	/^static inline double integerToDouble(Json::UInt64 value) {$/;"	f	namespace:Json
+integerToDouble	component/jsoncpp/src/json_value.cpp	/^template <typename T> static inline double integerToDouble(T value) {$/;"	f	namespace:Json
+invalidPath	component/jsoncpp/src/json_value.cpp	/^void Path::invalidPath(const std::string& \/*path*\/, int \/*location*\/) {$/;"	f	class:Json::Path
+isArray	component/jsoncpp/src/json_value.cpp	/^bool Value::isArray() const { return type_ == arrayValue; }$/;"	f	class:Json::Value
+isArray_	component/jsoncpp/include/value.h	/^  bool isArray_;$/;"	m	class:Json::ValueIteratorBase
+isBool	component/jsoncpp/src/json_value.cpp	/^bool Value::isBool() const { return type_ == booleanValue; }$/;"	f	class:Json::Value
+isControlCharacter	component/jsoncpp/src/json_tool.h	/^static inline bool isControlCharacter(char ch) { return ch > 0 && ch <= 0x1F; }$/;"	f	namespace:Json
+isConvertibleTo	component/jsoncpp/src/json_value.cpp	/^bool Value::isConvertibleTo(ValueType other) const {$/;"	f	class:Json::Value
+isDouble	component/jsoncpp/src/json_value.cpp	/^bool Value::isDouble() const { return type_ == realValue || isIntegral(); }$/;"	f	class:Json::Value
+isInt	component/jsoncpp/src/json_value.cpp	/^bool Value::isInt() const {$/;"	f	class:Json::Value
+isInt64	component/jsoncpp/src/json_value.cpp	/^bool Value::isInt64() const {$/;"	f	class:Json::Value
+isIntegral	component/jsoncpp/src/json_value.cpp	/^bool Value::isIntegral() const {$/;"	f	class:Json::Value
+isItemAvailable	component/jsoncpp/include/value.h	/^  inline bool isItemAvailable() const { return itemIsUsed_ == 0; }$/;"	f	class:Json::Value
+isMember	component/jsoncpp/src/json_value.cpp	/^bool Value::isMember(const CppTL::ConstString& key) const {$/;"	f	class:Json::Value
+isMember	component/jsoncpp/src/json_value.cpp	/^bool Value::isMember(const char* key) const {$/;"	f	class:Json::Value
+isMember	component/jsoncpp/src/json_value.cpp	/^bool Value::isMember(const std::string& key) const {$/;"	f	class:Json::Value
+isMemberNameStatic	component/jsoncpp/include/value.h	/^  inline bool isMemberNameStatic() const { return memberNameIsStatic_ == 0; }$/;"	f	class:Json::Value
+isMultineArray	component/jsoncpp/src/json_writer.cpp	/^bool StyledStreamWriter::isMultineArray(const Value& value) {$/;"	f	class:Json::StyledStreamWriter
+isMultineArray	component/jsoncpp/src/json_writer.cpp	/^bool StyledWriter::isMultineArray(const Value& value) {$/;"	f	class:Json::StyledWriter
+isNull	component/jsoncpp/src/json_value.cpp	/^bool Value::isNull() const { return type_ == nullValue; }$/;"	f	class:Json::Value
+isNull_	component/jsoncpp/include/value.h	/^  bool isNull_;$/;"	m	class:Json::ValueIteratorBase
+isNumeric	component/jsoncpp/src/json_value.cpp	/^bool Value::isNumeric() const { return isIntegral() || isDouble(); }$/;"	f	class:Json::Value
+isObject	component/jsoncpp/src/json_value.cpp	/^bool Value::isObject() const { return type_ == objectValue; }$/;"	f	class:Json::Value
+isStaticString	component/jsoncpp/src/json_value.cpp	/^bool Value::CZString::isStaticString() const { return index_ == noDuplication; }$/;"	f	class:Json::Value::CZString
+isString	component/jsoncpp/src/json_value.cpp	/^bool Value::isString() const { return type_ == stringValue; }$/;"	f	class:Json::Value
+isUInt	component/jsoncpp/src/json_value.cpp	/^bool Value::isUInt() const {$/;"	f	class:Json::Value
+isUInt64	component/jsoncpp/src/json_value.cpp	/^bool Value::isUInt64() const {$/;"	f	class:Json::Value
+isValidIndex	component/jsoncpp/src/json_value.cpp	/^bool Value::isValidIndex(ArrayIndex index) const { return index < size(); }$/;"	f	class:Json::Value
+isfinite	component/jsoncpp/src/json_writer.cpp	20;"	d	file:
+itemCount_	component/jsoncpp/include/value.h	/^  BucketIndex itemCount_;$/;"	m	class:Json::ValueInternalMap
+itemIndex_	component/jsoncpp/include/value.h	/^    BucketIndex itemIndex_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+itemPerLink	component/jsoncpp/include/value.h	/^    itemPerLink = 6$/;"	e	enum:Json::ValueInternalLink::__anon1
+itemsPerPage	component/jsoncpp/include/value.h	/^    itemsPerPage = 8$/;"	e	enum:Json::ValueInternalArray::__anon2
+items_	component/jsoncpp/include/value.h	/^  Value items_[itemPerLink];$/;"	m	class:Json::ValueInternalLink
+iterator	component/jsoncpp/include/value.h	/^  typedef ValueIterator iterator;$/;"	t	class:Json::Value
+iterator_	component/jsoncpp/include/value.h	/^  } iterator_;$/;"	m	class:Json::ValueIteratorBase	typeref:union:Json::ValueIteratorBase::__anon3
+iterator_category	component/jsoncpp/include/value.h	/^  typedef std::bidirectional_iterator_tag iterator_category;$/;"	t	class:Json::ValueIteratorBase
+kNull	component/jsoncpp/src/json_value.cpp	/^static const unsigned char ALIGNAS(8) kNull[sizeof(Value)] = { 0 };$/;"	m	namespace:Json	file:
+kNullRef	component/jsoncpp/src/json_value.cpp	/^const unsigned char& kNullRef = kNull[0];$/;"	m	namespace:Json	file:
+key_	component/jsoncpp/include/value.h	/^  std::string key_;$/;"	m	class:Json::PathArgument
+keys_	component/jsoncpp/include/value.h	/^  char* keys_[itemPerLink];$/;"	m	class:Json::ValueInternalLink
+kindIndex	component/jsoncpp/include/value.h	/^    kindIndex,$/;"	e	enum:Json::PathArgument::Kind
+kindKey	component/jsoncpp/include/value.h	/^    kindKey$/;"	e	enum:Json::PathArgument::Kind
+kindNone	component/jsoncpp/include/value.h	/^    kindNone = 0,$/;"	e	enum:Json::PathArgument::Kind
+kind_	component/jsoncpp/include/value.h	/^  Kind kind_;$/;"	m	class:Json::PathArgument
+lastValueEnd_	component/jsoncpp/include/reader.h	/^  Location lastValueEnd_;$/;"	m	class:Json::Reader
+lastValue_	component/jsoncpp/include/reader.h	/^  Value* lastValue_;$/;"	m	class:Json::Reader
+limit_	component/jsoncpp/include/value.h	/^  size_t limit_;$/;"	m	class:Json::Value
+link_	component/jsoncpp/include/value.h	/^    ValueInternalLink* link_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+m_bIsJson	server/jsonintf.h	/^    bool m_bIsJson;$/;"	m	class:CJsonIntf
+m_callback	server/timer.h	/^    TimerCallback m_callback;$/;"	m	class:CTimer
+m_cfd	component/net/handle.h	/^    int m_cfd;$/;"	m	class:CClient
+m_clientMap	component/net/global.h	/^    ClientMap m_clientMap;$/;"	m	class:CGlobalCfg
+m_expireSec	server/timer.h	/^    int m_expireSec;$/;"	m	class:CTimer
+m_fd	component/net/global.h	/^    int m_fd; \/\/ listen fd$/;"	m	class:CGlobalCfg
+m_host	component/net/global.h	/^    string m_host;$/;"	m	class:CGlobalCfg
+m_interval	server/timer.h	/^    int m_interval;$/;"	m	class:CTimer
+m_name	component/net/handle.h	/^    string m_name;$/;"	m	class:CClient
+m_nread	component/net/handle.h	/^    int m_nread;$/;"	m	class:CClient
+m_pEventLoop	component/net/global.h	/^    aeEventLoop* m_pEventLoop;$/;"	m	class:CGlobalCfg
+m_pInstance	component/net/global.cpp	/^CGlobalCfg* CGlobalCfg::m_pInstance = NULL;$/;"	m	class:CGlobalCfg	file:
+m_pInstance	component/net/global.h	/^    static CGlobalCfg* m_pInstance;$/;"	m	class:CGlobalCfg
+m_port	component/net/global.h	/^    int m_port;$/;"	m	class:CGlobalCfg
+m_querybuf	component/net/handle.h	/^    char m_querybuf[AE_BUF_SIZE];$/;"	m	class:CClient
+m_reader	server/jsonintf.h	/^    Json::Reader m_reader;$/;"	m	class:CJsonIntf
+m_replybuf	component/net/handle.h	/^    char m_replybuf[AE_BUF_SIZE];$/;"	m	class:CClient
+m_replylen	component/net/handle.h	/^    int m_replylen;$/;"	m	class:CClient
+m_timerSet	server/timer_queue.h	/^    TimerSet m_timerSet;$/;"	m	class:CTimerQueue
+m_timerfd	server/timer_queue.h	/^    int m_timerfd; \/\/ use linux timefd_xxx, with epoll, better than time wheel$/;"	m	class:CTimerQueue
+m_value	server/jsonintf.h	/^    Json::Value m_value;$/;"	m	class:CJsonIntf
+main	component/net/event.cpp	/^int main(void)$/;"	f
+main	component/net/global.cpp	/^int main(void)$/;"	f
+main	component/net/server.cpp	/^int main(void)$/;"	f
+main	server/main.cpp	/^int main(void)$/;"	f
+make	component/jsoncpp/src/json_value.cpp	/^Value& Path::make(Value& root) const {$/;"	f	class:Json::Path
+makePath	component/jsoncpp/src/json_value.cpp	/^void Path::makePath(const std::string& path, const InArgs& in) {$/;"	f	class:Json::Path
+map_	component/jsoncpp/include/value.h	/^    ObjectValues* map_;$/;"	m	union:Json::Value::ValueHolder
+map_	component/jsoncpp/include/value.h	/^    ValueInternalMap* map_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+map_	component/jsoncpp/include/value.h	/^    ValueInternalMap* map_;$/;"	m	union:Json::Value::ValueHolder
+map_	component/jsoncpp/include/value.h	/^    ValueInternalMap::IteratorState map_;$/;"	m	union:Json::ValueIteratorBase::__anon3
+mask	component/net/event.h	/^    int mask; \/* one of AE_(READABLE|WRITABLE) *\/$/;"	m	struct:aeFileEvent
+mask	component/net/event.h	/^    int mask;$/;"	m	struct:aeActedEvent
+match	component/jsoncpp/src/json_reader.cpp	/^bool Reader::match(Location pattern, int patternLength) {$/;"	f	class:Json::Reader
+maxInt	component/jsoncpp/include/value.h	/^  static const Int maxInt;$/;"	m	class:Json::Value
+maxInt	component/jsoncpp/src/json_value.cpp	/^const Int Value::maxInt = Int(UInt(-1) \/ 2);$/;"	m	class:Json::Value	file:
+maxInt64	component/jsoncpp/include/value.h	/^  static const Int64 maxInt64;$/;"	m	class:Json::Value
+maxInt64	component/jsoncpp/src/json_value.cpp	/^const Int64 Value::maxInt64 = Int64(UInt64(-1) \/ 2);$/;"	m	class:Json::Value	file:
+maxLargestInt	component/jsoncpp/include/value.h	/^  static const LargestInt maxLargestInt;$/;"	m	class:Json::Value
+maxLargestInt	component/jsoncpp/src/json_value.cpp	/^const LargestInt Value::maxLargestInt = LargestInt(LargestUInt(-1) \/ 2);$/;"	m	class:Json::Value	file:
+maxLargestUInt	component/jsoncpp/include/value.h	/^  static const LargestUInt maxLargestUInt;$/;"	m	class:Json::Value
+maxLargestUInt	component/jsoncpp/src/json_value.cpp	/^const LargestUInt Value::maxLargestUInt = LargestUInt(-1);$/;"	m	class:Json::Value	file:
+maxUInt	component/jsoncpp/include/value.h	/^  static const UInt maxUInt;$/;"	m	class:Json::Value
+maxUInt	component/jsoncpp/src/json_value.cpp	/^const UInt Value::maxUInt = UInt(-1);$/;"	m	class:Json::Value	file:
+maxUInt64	component/jsoncpp/include/value.h	/^  static const UInt64 maxUInt64;$/;"	m	class:Json::Value
+maxUInt64	component/jsoncpp/src/json_value.cpp	/^const UInt64 Value::maxUInt64 = UInt64(-1);$/;"	m	class:Json::Value	file:
+maxUInt64AsDouble	component/jsoncpp/src/json_value.cpp	/^static const double maxUInt64AsDouble = 18446744073709551615.0;$/;"	m	namespace:Json	file:
+maxfd	component/net/event.h	/^    int maxfd;   \/* highest file descriptor currently registered *\/$/;"	m	struct:aeEventLoop
+message	component/jsoncpp/include/reader.h	/^    std::string message;$/;"	m	struct:Json::Reader::StructuredError
+message_	component/jsoncpp/include/reader.h	/^    std::string message_;$/;"	m	class:Json::Reader::ErrorInfo
+minInt	component/jsoncpp/include/value.h	/^  static const Int minInt;$/;"	m	class:Json::Value
+minInt	component/jsoncpp/src/json_value.cpp	/^const Int Value::minInt = Int(~(UInt(-1) \/ 2));$/;"	m	class:Json::Value	file:
+minInt64	component/jsoncpp/include/value.h	/^  static const Int64 minInt64;$/;"	m	class:Json::Value
+minInt64	component/jsoncpp/src/json_value.cpp	/^const Int64 Value::minInt64 = Int64(~(UInt64(-1) \/ 2));$/;"	m	class:Json::Value	file:
+minLargestInt	component/jsoncpp/include/value.h	/^  static const LargestInt minLargestInt;$/;"	m	class:Json::Value
+minLargestInt	component/jsoncpp/src/json_value.cpp	/^const LargestInt Value::minLargestInt = LargestInt(~(LargestUInt(-1) \/ 2));$/;"	m	class:Json::Value	file:
+next_	component/jsoncpp/include/value.h	/^  ValueInternalLink* next_;$/;"	m	class:Json::ValueInternalLink
+next_	component/jsoncpp/src/json_batchallocator.h	/^    BatchInfo* next_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+noDuplication	component/jsoncpp/include/value.h	/^      noDuplication = 0,$/;"	e	enum:Json::Value::CZString::DuplicationPolicy
+nodes_	component/jsoncpp/include/reader.h	/^  Nodes nodes_;$/;"	m	class:Json::Reader
+normalizeEOL	component/jsoncpp/src/json_writer.cpp	/^std::string StyledStreamWriter::normalizeEOL(const std::string& text) {$/;"	f	class:Json::StyledStreamWriter
+normalizeEOL	component/jsoncpp/src/json_writer.cpp	/^std::string StyledWriter::normalizeEOL(const std::string& text) {$/;"	f	class:Json::StyledWriter
+null	component/jsoncpp/include/value.h	/^  static const Value& null;$/;"	m	class:Json::Value
+null	component/jsoncpp/src/json_value.cpp	/^const Value& Value::null = reinterpret_cast<const Value&>(kNullRef);$/;"	m	class:Json::Value	file:
+nullValue	component/jsoncpp/include/value.h	/^  nullValue = 0, \/\/\/< 'null' value$/;"	e	enum:Json::ValueType
+numberOfCommentPlacement	component/jsoncpp/include/value.h	/^  numberOfCommentPlacement$/;"	e	enum:Json::CommentPlacement
+objectValue	component/jsoncpp/include/value.h	/^  objectValue    \/\/\/< object value (collection of name\/value pairs).$/;"	e	enum:Json::ValueType
+objectsPerPage_	component/jsoncpp/src/json_batchallocator.h	/^  unsigned int objectsPerPage_;$/;"	m	class:Json::BatchAllocator
+offset_limit	component/jsoncpp/include/reader.h	/^    size_t offset_limit;$/;"	m	struct:Json::Reader::StructuredError
+offset_start	component/jsoncpp/include/reader.h	/^    size_t offset_start;$/;"	m	struct:Json::Reader::StructuredError
+omitEndingLineFeed	component/jsoncpp/src/json_writer.cpp	/^void FastWriter::omitEndingLineFeed() { omitEndingLineFeed_ = true; }$/;"	f	class:Json::FastWriter
+omitEndingLineFeed_	component/jsoncpp/include/writer.h	/^  bool omitEndingLineFeed_;$/;"	m	class:Json::FastWriter
+operator !	component/jsoncpp/src/json_value.cpp	/^bool Value::operator!() const { return isNull(); }$/;"	f	class:Json::Value
+operator !=	component/jsoncpp/include/value.h	/^  bool operator!=(const SelfType& other) const { return !isEqual(other); }$/;"	f	class:Json::ValueIteratorBase
+operator !=	component/jsoncpp/src/json_value.cpp	/^bool Value::operator!=(const Value& other) const { return !(*this == other); }$/;"	f	class:Json::Value
+operator *	component/jsoncpp/include/value.h	/^  reference operator*() const { return deref(); }$/;"	f	class:Json::ValueConstIterator
+operator *	component/jsoncpp/include/value.h	/^  reference operator*() const { return deref(); }$/;"	f	class:Json::ValueIterator
+operator ++	component/jsoncpp/include/value.h	/^  SelfType operator++(int) {$/;"	f	class:Json::ValueConstIterator
+operator ++	component/jsoncpp/include/value.h	/^  SelfType operator++(int) {$/;"	f	class:Json::ValueIterator
+operator ++	component/jsoncpp/include/value.h	/^  SelfType& operator++() {$/;"	f	class:Json::ValueConstIterator
+operator ++	component/jsoncpp/include/value.h	/^  SelfType& operator++() {$/;"	f	class:Json::ValueIterator
+operator -	component/jsoncpp/include/value.h	/^  difference_type operator-(const SelfType& other) const {$/;"	f	class:Json::ValueIteratorBase
+operator --	component/jsoncpp/include/value.h	/^  SelfType operator--(int) {$/;"	f	class:Json::ValueConstIterator
+operator --	component/jsoncpp/include/value.h	/^  SelfType operator--(int) {$/;"	f	class:Json::ValueIterator
+operator --	component/jsoncpp/include/value.h	/^  SelfType& operator--() {$/;"	f	class:Json::ValueConstIterator
+operator --	component/jsoncpp/include/value.h	/^  SelfType& operator--() {$/;"	f	class:Json::ValueIterator
+operator ->	component/jsoncpp/include/value.h	/^  pointer operator->() const { return &deref(); }$/;"	f	class:Json::ValueConstIterator
+operator ->	component/jsoncpp/include/value.h	/^  pointer operator->() const { return &deref(); }$/;"	f	class:Json::ValueIterator
+operator <	component/jsoncpp/src/json_value.cpp	/^bool Value::CZString::operator<(const CZString& other) const {$/;"	f	class:Json::Value::CZString
+operator <	component/jsoncpp/src/json_value.cpp	/^bool Value::operator<(const Value& other) const {$/;"	f	class:Json::Value
+operator <<	component/jsoncpp/src/json_writer.cpp	/^std::ostream& operator<<(std::ostream& sout, const Value& root) {$/;"	f	namespace:Json
+operator <=	component/jsoncpp/src/json_value.cpp	/^bool Value::operator<=(const Value& other) const { return !(other < *this); }$/;"	f	class:Json::Value
+operator =	component/jsoncpp/src/json_value.cpp	/^Value& Value::operator=(Value other) {$/;"	f	class:Json::Value
+operator =	component/jsoncpp/src/json_value.cpp	/^Value::CZString& Value::CZString::operator=(CZString other) {$/;"	f	class:Json::Value::CZString
+operator ==	component/jsoncpp/include/value.h	/^  bool operator==(const SelfType& other) const { return isEqual(other); }$/;"	f	class:Json::ValueIteratorBase
+operator ==	component/jsoncpp/src/json_value.cpp	/^bool Value::CZString::operator==(const CZString& other) const {$/;"	f	class:Json::Value::CZString
+operator ==	component/jsoncpp/src/json_value.cpp	/^bool Value::operator==(const Value& other) const {$/;"	f	class:Json::Value
+operator >	component/jsoncpp/src/json_value.cpp	/^bool Value::operator>(const Value& other) const { return other < *this; }$/;"	f	class:Json::Value
+operator >=	component/jsoncpp/src/json_value.cpp	/^bool Value::operator>=(const Value& other) const { return !(*this < other); }$/;"	f	class:Json::Value
+operator >>	component/jsoncpp/src/json_reader.cpp	/^std::istream& operator>>(std::istream& sin, Value& root) {$/;"	f	namespace:Json
+operator []	component/jsoncpp/src/json_value.cpp	/^Value& Value::operator[](ArrayIndex index) {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^Value& Value::operator[](const CppTL::ConstString& key) {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^Value& Value::operator[](const StaticString& key) {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^Value& Value::operator[](const char* key) {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^Value& Value::operator[](const std::string& key) {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^Value& Value::operator[](int index) {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[](ArrayIndex index) const {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[](const CppTL::ConstString& key) const {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[](const char* key) const {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[](const std::string& key) const {$/;"	f	class:Json::Value
+operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[](int index) const {$/;"	f	class:Json::Value
+operator const char*	component/jsoncpp/include/value.h	/^  operator const char*() const { return str_; }$/;"	f	class:Json::StaticString
+pageCount_	component/jsoncpp/include/value.h	/^  PageIndex pageCount_;$/;"	m	class:Json::ValueInternalArray
+pages_	component/jsoncpp/include/value.h	/^  Value** pages_;$/;"	m	class:Json::ValueInternalArray
+parse	component/jsoncpp/src/json_reader.cpp	/^Reader::parse(const std::string& document, Value& root, bool collectComments) {$/;"	f	class:Json::Reader
+parse	component/jsoncpp/src/json_reader.cpp	/^bool Reader::parse(const char* beginDoc,$/;"	f	class:Json::Reader
+parse	component/jsoncpp/src/json_reader.cpp	/^bool Reader::parse(std::istream& sin, Value& root, bool collectComments) {$/;"	f	class:Json::Reader
+pointer	component/jsoncpp/include/value.h	/^  typedef Value* pointer;$/;"	t	class:Json::ValueIterator
+pointer	component/jsoncpp/include/value.h	/^  typedef const Value* pointer;$/;"	t	class:Json::ValueConstIterator
+previous_	component/jsoncpp/include/value.h	/^  ValueInternalLink* previous_;$/;"	m	class:Json::ValueInternalLink
+pushError	component/jsoncpp/src/json_reader.cpp	/^bool Reader::pushError(const Value& value, const std::string& message) {$/;"	f	class:Json::Reader
+pushError	component/jsoncpp/src/json_reader.cpp	/^bool Reader::pushError(const Value& value, const std::string& message, const Value& extra) {$/;"	f	class:Json::Reader
+pushValue	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::pushValue(const std::string& value) {$/;"	f	class:Json::StyledStreamWriter
+pushValue	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::pushValue(const std::string& value) {$/;"	f	class:Json::StyledWriter
+readArray	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readArray(Token& tokenStart) {$/;"	f	class:Json::Reader
+readCStyleComment	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readCStyleComment() {$/;"	f	class:Json::Reader
+readComment	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readComment() {$/;"	f	class:Json::Reader
+readCppStyleComment	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readCppStyleComment() {$/;"	f	class:Json::Reader
+readNumber	component/jsoncpp/src/json_reader.cpp	/^void Reader::readNumber() {$/;"	f	class:Json::Reader
+readObject	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readObject(Token& tokenStart) {$/;"	f	class:Json::Reader
+readString	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readString() {$/;"	f	class:Json::Reader
+readToken	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readToken(Token& token) {$/;"	f	class:Json::Reader
+readValue	component/jsoncpp/src/json_reader.cpp	/^bool Reader::readValue() {$/;"	f	class:Json::Reader
+realValue	component/jsoncpp/include/value.h	/^  realValue,     \/\/\/< double value$/;"	e	enum:Json::ValueType
+real_	component/jsoncpp/include/value.h	/^    double real_;$/;"	m	union:Json::Value::ValueHolder
+recoverFromError	component/jsoncpp/src/json_reader.cpp	/^bool Reader::recoverFromError(TokenType skipUntilToken) {$/;"	f	class:Json::Reader
+reference	component/jsoncpp/include/value.h	/^  typedef Value& reference;$/;"	t	class:Json::ValueIterator
+reference	component/jsoncpp/include/value.h	/^  typedef const Value& reference;$/;"	t	class:Json::ValueConstIterator
+release	component/jsoncpp/src/json_batchallocator.h	/^  void release(AllocatedType* object) {$/;"	f	class:Json::BatchAllocator
+releaseStringValue	component/jsoncpp/src/json_value.cpp	/^static inline void releaseStringValue(char* value) { free(value); }$/;"	f	namespace:Json
+removeMember	component/jsoncpp/src/json_value.cpp	/^Value Value::removeMember(const char* key) {$/;"	f	class:Json::Value
+removeMember	component/jsoncpp/src/json_value.cpp	/^Value Value::removeMember(const std::string& key) {$/;"	f	class:Json::Value
+resize	component/jsoncpp/src/json_value.cpp	/^void Value::resize(ArrayIndex newSize) {$/;"	f	class:Json::Value
+resolve	component/jsoncpp/src/json_value.cpp	/^Value Path::resolve(const Value& root, const Value& defaultValue) const {$/;"	f	class:Json::Path
+resolve	component/jsoncpp/src/json_value.cpp	/^const Value& Path::resolve(const Value& root) const {$/;"	f	class:Json::Path
+resolveReference	component/jsoncpp/src/json_value.cpp	/^Value& Value::resolveReference(const char* key, bool isStatic) {$/;"	f	class:Json::Value
+rfileProc	component/net/event.h	/^    aeFileProc *rfileProc;$/;"	m	struct:aeFileEvent
+rightMargin_	component/jsoncpp/include/writer.h	/^  int rightMargin_;$/;"	m	class:Json::StyledStreamWriter
+rightMargin_	component/jsoncpp/include/writer.h	/^  int rightMargin_;$/;"	m	class:Json::StyledWriter
+setComment	component/jsoncpp/src/json_value.cpp	/^void Value::CommentInfo::setComment(const char* text) {$/;"	f	class:Json::Value::CommentInfo
+setComment	component/jsoncpp/src/json_value.cpp	/^void Value::setComment(const char* comment, CommentPlacement placement) {$/;"	f	class:Json::Value
+setComment	component/jsoncpp/src/json_value.cpp	/^void Value::setComment(const std::string& comment, CommentPlacement placement) {$/;"	f	class:Json::Value
+setItemUsed	component/jsoncpp/include/value.h	/^  inline void setItemUsed(bool isUsed = true) { itemIsUsed_ = isUsed ? 1 : 0; }$/;"	f	class:Json::Value
+setMemberNameIsStatic	component/jsoncpp/include/value.h	/^  inline void setMemberNameIsStatic(bool isStatic) {$/;"	f	class:Json::Value
+setOffsetLimit	component/jsoncpp/src/json_value.cpp	/^void Value::setOffsetLimit(size_t limit) { limit_ = limit; }$/;"	f	class:Json::Value
+setOffsetStart	component/jsoncpp/src/json_value.cpp	/^void Value::setOffsetStart(size_t start) { start_ = start; }$/;"	f	class:Json::Value
+setsize	component/net/event.h	/^    int setsize; \/* max number of file descriptors tracked *\/$/;"	m	struct:aeEventLoop
+size	component/jsoncpp/src/json_value.cpp	/^ArrayIndex Value::size() const {$/;"	f	class:Json::Value
+size_	component/jsoncpp/include/value.h	/^  ArrayIndex size_;$/;"	m	class:Json::ValueInternalArray
+size_t	component/jsoncpp/include/value.h	/^  typedef unsigned int size_t;$/;"	t	class:Json::ValueConstIterator
+size_t	component/jsoncpp/include/value.h	/^  typedef unsigned int size_t;$/;"	t	class:Json::ValueIterator
+size_t	component/jsoncpp/include/value.h	/^  typedef unsigned int size_t;$/;"	t	class:Json::ValueIteratorBase
+skipCommentTokens	component/jsoncpp/src/json_reader.cpp	/^void Reader::skipCommentTokens(Token& token) {$/;"	f	class:Json::Reader
+skipSpaces	component/jsoncpp/src/json_reader.cpp	/^void Reader::skipSpaces() {$/;"	f	class:Json::Reader
+snprintf	component/jsoncpp/src/json_reader.cpp	19;"	d	file:
+snprintf	component/jsoncpp/src/json_writer.cpp	21;"	d	file:
+start_	component/jsoncpp/include/reader.h	/^    Location start_;$/;"	m	class:Json::Reader::Token
+start_	component/jsoncpp/include/value.h	/^  size_t start_;$/;"	m	class:Json::Value
+str_	component/jsoncpp/include/value.h	/^  const char* str_;$/;"	m	class:Json::StaticString
+strictMode	component/jsoncpp/src/json_reader.cpp	/^Features Features::strictMode() {$/;"	f	class:Json::Features
+strictRoot_	component/jsoncpp/include/feature.h	/^  bool strictRoot_;$/;"	m	class:Json::Features
+stringValue	component/jsoncpp/include/value.h	/^  stringValue,   \/\/\/< UTF-8 string value$/;"	e	enum:Json::ValueType
+string_	component/jsoncpp/include/value.h	/^    char* string_;$/;"	m	union:Json::Value::ValueHolder
+swap	component/jsoncpp/src/json_value.cpp	/^void Value::CZString::swap(CZString& other) {$/;"	f	class:Json::Value::CZString
+swap	component/jsoncpp/src/json_value.cpp	/^void Value::swap(Value& other) {$/;"	f	class:Json::Value
+tailLink_	component/jsoncpp/include/value.h	/^  ValueInternalLink* tailLink_;$/;"	m	class:Json::ValueInternalMap
+toStyledString	component/jsoncpp/src/json_value.cpp	/^std::string Value::toStyledString() const {$/;"	f	class:Json::Value
+tokenArrayBegin	component/jsoncpp/include/reader.h	/^    tokenArrayBegin,$/;"	e	enum:Json::Reader::TokenType
+tokenArrayEnd	component/jsoncpp/include/reader.h	/^    tokenArrayEnd,$/;"	e	enum:Json::Reader::TokenType
+tokenArraySeparator	component/jsoncpp/include/reader.h	/^    tokenArraySeparator,$/;"	e	enum:Json::Reader::TokenType
+tokenComment	component/jsoncpp/include/reader.h	/^    tokenComment,$/;"	e	enum:Json::Reader::TokenType
+tokenEndOfStream	component/jsoncpp/include/reader.h	/^    tokenEndOfStream = 0,$/;"	e	enum:Json::Reader::TokenType
+tokenError	component/jsoncpp/include/reader.h	/^    tokenError$/;"	e	enum:Json::Reader::TokenType
+tokenFalse	component/jsoncpp/include/reader.h	/^    tokenFalse,$/;"	e	enum:Json::Reader::TokenType
+tokenMemberSeparator	component/jsoncpp/include/reader.h	/^    tokenMemberSeparator,$/;"	e	enum:Json::Reader::TokenType
+tokenNull	component/jsoncpp/include/reader.h	/^    tokenNull,$/;"	e	enum:Json::Reader::TokenType
+tokenNumber	component/jsoncpp/include/reader.h	/^    tokenNumber,$/;"	e	enum:Json::Reader::TokenType
+tokenObjectBegin	component/jsoncpp/include/reader.h	/^    tokenObjectBegin,$/;"	e	enum:Json::Reader::TokenType
+tokenObjectEnd	component/jsoncpp/include/reader.h	/^    tokenObjectEnd,$/;"	e	enum:Json::Reader::TokenType
+tokenString	component/jsoncpp/include/reader.h	/^    tokenString,$/;"	e	enum:Json::Reader::TokenType
+tokenTrue	component/jsoncpp/include/reader.h	/^    tokenTrue,$/;"	e	enum:Json::Reader::TokenType
+token_	component/jsoncpp/include/reader.h	/^    Token token_;$/;"	m	class:Json::Reader::ErrorInfo
+type	component/jsoncpp/src/json_value.cpp	/^ValueType Value::type() const { return type_; }$/;"	f	class:Json::Value
+type_	component/jsoncpp/include/reader.h	/^    TokenType type_;$/;"	m	class:Json::Reader::Token
+uintToString	component/jsoncpp/src/json_tool.h	/^static inline void uintToString(LargestUInt value, char*& current) {$/;"	f	namespace:Json
+uintToStringBufferSize	component/jsoncpp/src/json_tool.h	/^  uintToStringBufferSize = 3 * sizeof(LargestUInt) + 1$/;"	e	enum:Json::__anon4
+uintValue	component/jsoncpp/include/value.h	/^  uintValue,     \/\/\/< unsigned integer value$/;"	e	enum:Json::ValueType
+uint_	component/jsoncpp/include/value.h	/^    LargestUInt uint_;$/;"	m	union:Json::Value::ValueHolder
+unindent	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::unindent() {$/;"	f	class:Json::StyledStreamWriter
+unindent	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::unindent() {$/;"	f	class:Json::StyledWriter
+unknown	component/jsoncpp/src/json_value.cpp	/^static const unsigned int unknown = (unsigned)-1;$/;"	m	namespace:Json	file:
+used_	component/jsoncpp/src/json_batchallocator.h	/^    AllocatedType* used_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+valueToQuotedString	component/jsoncpp/src/json_writer.cpp	/^std::string valueToQuotedString(const char* value) {$/;"	f	namespace:Json
+valueToString	component/jsoncpp/src/json_writer.cpp	/^std::string valueToString(Int value) {$/;"	f	namespace:Json
+valueToString	component/jsoncpp/src/json_writer.cpp	/^std::string valueToString(LargestInt value) {$/;"	f	namespace:Json
+valueToString	component/jsoncpp/src/json_writer.cpp	/^std::string valueToString(LargestUInt value) {$/;"	f	namespace:Json
+valueToString	component/jsoncpp/src/json_writer.cpp	/^std::string valueToString(UInt value) {$/;"	f	namespace:Json
+valueToString	component/jsoncpp/src/json_writer.cpp	/^std::string valueToString(bool value) { return value ? "true" : "false"; }$/;"	f	namespace:Json
+valueToString	component/jsoncpp/src/json_writer.cpp	/^std::string valueToString(double value) {$/;"	f	namespace:Json
+value_	component/jsoncpp/include/value.h	/^  } value_;$/;"	m	class:Json::Value	typeref:union:Json::Value::ValueHolder
+value_type	component/jsoncpp/include/value.h	/^  typedef Value value_type;$/;"	t	class:Json::ValueIterator
+value_type	component/jsoncpp/include/value.h	/^  typedef const Value value_type;$/;"	t	class:Json::ValueConstIterator
+wfileProc	component/net/event.h	/^    aeFileProc *wfileProc;$/;"	m	struct:aeFileEvent
+write	component/jsoncpp/src/json_writer.cpp	/^std::string FastWriter::write(const Value& root) {$/;"	f	class:Json::FastWriter
+write	component/jsoncpp/src/json_writer.cpp	/^std::string StyledWriter::write(const Value& root) {$/;"	f	class:Json::StyledWriter
+write	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::write(std::ostream& out, const Value& root) {$/;"	f	class:Json::StyledStreamWriter
+writeArrayValue	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writeArrayValue(const Value& value) {$/;"	f	class:Json::StyledStreamWriter
+writeArrayValue	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeArrayValue(const Value& value) {$/;"	f	class:Json::StyledWriter
+writeCommentAfterValueOnSameLine	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writeCommentAfterValueOnSameLine(const Value& root) {$/;"	f	class:Json::StyledStreamWriter
+writeCommentAfterValueOnSameLine	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeCommentAfterValueOnSameLine(const Value& root) {$/;"	f	class:Json::StyledWriter
+writeCommentBeforeValue	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writeCommentBeforeValue(const Value& root) {$/;"	f	class:Json::StyledStreamWriter
+writeCommentBeforeValue	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeCommentBeforeValue(const Value& root) {$/;"	f	class:Json::StyledWriter
+writeIndent	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writeIndent() {$/;"	f	class:Json::StyledStreamWriter
+writeIndent	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeIndent() {$/;"	f	class:Json::StyledWriter
+writeValue	component/jsoncpp/src/json_writer.cpp	/^void FastWriter::writeValue(const Value& value) {$/;"	f	class:Json::FastWriter
+writeValue	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writeValue(const Value& value) {$/;"	f	class:Json::StyledStreamWriter
+writeValue	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeValue(const Value& value) {$/;"	f	class:Json::StyledWriter
+writeWithIndent	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writeWithIndent(const std::string& value) {$/;"	f	class:Json::StyledStreamWriter
+writeWithIndent	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeWithIndent(const std::string& value) {$/;"	f	class:Json::StyledWriter
+yamlCompatiblityEnabled_	component/jsoncpp/include/writer.h	/^  bool yamlCompatiblityEnabled_;$/;"	m	class:Json::FastWriter
+zfree	component/net/ae_epoll.cpp	38;"	d	file:
+zmalloc	component/net/ae_epoll.cpp	36;"	d	file:
+zrealloc	component/net/ae_epoll.cpp	37;"	d	file:
+~BatchAllocator	component/jsoncpp/src/json_batchallocator.h	/^  ~BatchAllocator() {$/;"	f	class:Json::BatchAllocator
+~CClient	component/net/handle.cpp	/^CClient::~CClient()$/;"	f	class:CClient
+~CGlobalCfg	component/net/global.cpp	/^CGlobalCfg::~CGlobalCfg()$/;"	f	class:CGlobalCfg
+~CZString	component/jsoncpp/src/json_value.cpp	/^Value::CZString::~CZString() {$/;"	f	class:Json::Value::CZString
+~CommentInfo	component/jsoncpp/src/json_value.cpp	/^Value::CommentInfo::~CommentInfo() {$/;"	f	class:Json::Value::CommentInfo
+~FastWriter	component/jsoncpp/include/writer.h	/^  virtual ~FastWriter() {}$/;"	f	class:Json::FastWriter
+~StyledStreamWriter	component/jsoncpp/include/writer.h	/^  ~StyledStreamWriter() {}$/;"	f	class:Json::StyledStreamWriter
+~StyledWriter	component/jsoncpp/include/writer.h	/^  virtual ~StyledWriter() {}$/;"	f	class:Json::StyledWriter
+~Value	component/jsoncpp/src/json_value.cpp	/^Value::~Value() {$/;"	f	class:Json::Value
+~Writer	component/jsoncpp/src/json_writer.cpp	/^Writer::~Writer() {}$/;"	f	class:Json::Writer

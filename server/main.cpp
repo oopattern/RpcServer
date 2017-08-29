@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <time.h>
 #include <vector>
 #include <string>
 #include <list>
+#include <map>
 #include <iostream>
 #include <algorithm>
 #include <functional>
 #include "jsonintf.h"
 #include "timer_queue.h"
+#include "../component/net/event.h"
+#include "../component/net/ae_epoll.h"
 
 using std::list;
 using std::string;
@@ -195,7 +199,7 @@ void TestMap()
 bool CompareSize(string& s, int size)
 {
     cout << s << endl;
-    return s.size() < size;
+    return (int)s.size() < size;
 }
 
 void TestBind()
@@ -205,7 +209,7 @@ void TestBind()
         public:
             bool CheckSize(string& s, int size)
             {
-                return s.size() < size;
+                return (int)s.size() < size;
             }
     };
     auto f = std::bind(CompareSize, _1, 6);
@@ -213,9 +217,37 @@ void TestBind()
     cout << f(s) << endl;
 }
 
+int BindFunc(int arg1, std::string& arg2, float arg3)
+{
+    cout << "globalfunc:" << arg1 << " " << arg2 << " " << arg3 << endl;
+    return 0;
+}
+
+typedef std::function<void (string&,float)> BIND_F1;
+typedef std::function<void (int,int,int)> BIND_F2;
+void TestBindFunction(void)
+{
+    class CBind 
+    {
+    public:
+        int Check(int arg1, int arg2, int arg3)
+        {
+            cout << "memberfunc:" << arg1 << " " << arg2 << " " << arg3 << endl;
+            return 0;
+        }
+    };
+    BIND_F1 f1 = std::bind(BindFunc, 5566, _1, _2);
+    std::string name("lidi");
+    f1(name, 9.11);
+
+    CBind bf;
+    BIND_F2 f2 = std::bind(&CBind::Check, &bf, _3, _2, _1);
+    f2(11,22,33);
+}
+
 void TestTimeCallback(string& name)
 {
-    cout << "Event1 - " << time(NULL) << " name: " << name << endl;
+    cout << "Event1: " << time(NULL) << " name: " << name << endl;
 }
 
 void TestTimer()
@@ -229,14 +261,15 @@ void TestTimer()
         }
         void PrintName(string& lastname)
         {
-            cout << "Event2 - " << time(NULL) <<  " FirstName: " << m_firstname << ", LastName: " << lastname << endl;
+            cout << "Event2: " << time(NULL) <<  " FirstName: " << m_firstname << ", LastName: " << lastname << endl;
         }
     private:
         string m_firstname;
     };
 
-    string firstname("oath");
-    string lastname("lidi");
+    // use bind to register callback func
+    string firstname("dick");
+    string lastname("oopattern");
     CPerson person(firstname);
     CTimerQueue tq;
     //usage 1 : global func
@@ -245,11 +278,150 @@ void TestTimer()
     //usage 2 : member func
     TimerCallback fm = std::bind(&CPerson::PrintName, &person, lastname);
     tq.RunAt(fm, time(NULL)+5, 2);
+
+    // register epoll event
+    aeEventLoop* pLoop = CreateEventLoop(MAX_EVENT_NUM);
+    CreateFileEvent(pLoop, tq.GetTimerfd(), AE_READABLE, NULL, NULL);
+
+    // loop event
     while(1)
     {
-        tq.ProcessExpire();
-        sleep(1);
+        int numevents = 0;
+        struct timeval tvp;
+        
+        tvp.tv_sec = AE_WAIT_TIME;
+        tvp.tv_usec = 0;
+        numevents = aeApiPoll(pLoop, &tvp);
+        if(numevents <= 0)
+        {
+            continue;
+        }
+        for(int i = 0; i < numevents; i++)
+        {
+            int fd = pLoop->acted[i].fd;
+            int mask = pLoop->acted[i].mask;
+            if((fd == tq.GetTimerfd()) 
+                && (mask == AE_READABLE))
+            {
+                cout << "catch time event" << endl;
+                tq.ProcessExpire();
+            }
+        }
     }
+}
+
+void TestSet()
+{
+    std::set<int> v{1,100,-3,66,9,18,11,23,57,48};
+    for(const auto& item : v)
+    {
+        cout << item << endl;
+    }
+
+    std::set<std::pair<int,string>> xx{{100," hello "},{33," word "},{44," lidi "},{-8," listen "}};
+    for(const auto& item : xx)
+    {
+        cout << item.first << item.second << endl;
+    }
+}
+
+void TestMapCompare()
+{
+    cout << "- - - - - - - - - - - - - Test Map - - - - - - - - - - -" << endl;
+    std::map<int,string> v{{1," www"},{-1," baidu"},{9," google"},{18," mtk"},{12," oath"}};
+    for(const auto& item : v)
+    {
+        cout << item.first << item.second << endl;
+    }
+}
+
+void TestMemFuncConst()
+{
+    return;   
+}
+
+void TestRefConst()
+{
+    class CWindow 
+    {
+    public:
+        CWindow() {}
+        virtual ~CWindow() {}
+    public:
+        virtual void Display() const 
+        { 
+            cout << "CWindow Display" << endl; 
+        }
+    };
+
+    class CDerivedWindow: public CWindow
+    {
+    public:
+        virtual void Display() const
+        {
+            cout << "CDerivedWindow Display" << endl;
+        }
+    };
+
+    class CDisplay
+    {
+    public:
+        void ConstValDisplay(CWindow w)
+        {
+            w.Display();
+        }
+        void ConstRefDisplay(const CWindow& w)
+        {
+            w.Display();
+        }
+    };
+
+    CWindow baseW;
+    CDerivedWindow derivedW;
+    CDisplay d;
+    cout << "- - - - - Test Const Pass - - - - - - " << endl;
+    d.ConstValDisplay(baseW);
+    d.ConstValDisplay(derivedW);
+    cout << "- - - - - Test Const Reference - - - - - - " << endl;
+    d.ConstRefDisplay(baseW);
+    d.ConstRefDisplay(derivedW);
+}
+
+void TestRefReturn()
+{
+    class CRation
+    {
+    public:
+        CRation(int num) : m_result(num) {}
+        const CRation operator*(const CRation& w)
+        {
+            CRation out(w.m_result * this->m_result);
+            return out;
+        }   
+        void GetVal() const
+        {
+            cout << m_result << endl;
+        }
+    private:
+        int m_result;
+    };
+
+    CRation a(10);
+    CRation b(25);
+    CRation c = a * b;
+    c.GetVal();
+}
+
+void FuncEach(int num)
+{
+    cout << num << endl;
+}
+
+void TestForeach()
+{
+    std::vector<int> v = {1,2,3,4,5};
+    //for_each(v.begin(), v.end(), FuncEach);
+    for_each(v.begin(), v.end(), std::bind(FuncEach, _1));
 }
 
 int main(void)
@@ -264,6 +436,12 @@ int main(void)
     //TestAlgorithm();
     //TestMap();
     //TestBind();
-    TestTimer();
+    //TestTimer();
+    //TestSet();
+    //TestMapCompare();
+    //TestRefConst();
+    //TestRefReturn();
+    //TestBindFunction();
+    TestForeach();
     return 0;
 }
