@@ -17,7 +17,7 @@ VPATH = $(SRC_PATH)
 LINK =  -rdynamic
 
 ifdef CCREACTOR_LIB
-LINK += -L$(CCREACTOR_LIB_PATH)/lib -l$(CCREACTOR_LIB)
+LINK += -lpthread -L$(CCREACTOR_LIB_PATH)/lib -l$(CCREACTOR_LIB)
 CC_LIB_INC := $(shell find $(CCREACTOR_LIB_PATH)  -maxdepth 4 -type d)
 CC_LIB_INC_PATH = $(addprefix -I, $(CC_LIB_INC))
 INC += $(CC_LIB_INC_PATH)

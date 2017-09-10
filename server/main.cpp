@@ -11,6 +11,7 @@
 #include <functional>
 #include "jsonintf.h"
 #include "timer_queue.h"
+#include "../component/udplog/log_udp.h"
 #include "../component/net/event.h"
 #include "../component/net/ae_epoll.h"
 
@@ -23,6 +24,7 @@ using std::endl;
 using namespace std::placeholders;
 
 extern void TestJson(void);
+extern int TestUdplog(void);
 
 void TestVector()
 {
@@ -426,22 +428,6 @@ void TestForeach()
 
 int main(void)
 {
-    //TestJson();
-    //TestVector();
-    //TestUpper();
-    //TestIterator();
-    //TestBinSearch();
-    //TestInsert();
-    //TestErase();
-    //TestAlgorithm();
-    //TestMap();
-    //TestBind();
-    //TestTimer();
-    //TestSet();
-    //TestMapCompare();
-    //TestRefConst();
-    //TestRefReturn();
-    //TestBindFunction();
-    TestForeach();
+    TestUdplog();
     return 0;
 }

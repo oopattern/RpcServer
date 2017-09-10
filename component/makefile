@@ -13,6 +13,7 @@ endif
 cc:
 	rm -rf lib/*
 	rm -rf  obj/*
+	make -f makefile.udplog all
 	make -f makefile.json   all
 	make -f makefile.core   all
 	make -f makefile.ar     all
@@ -20,6 +21,7 @@ cc:
 net:
 	rm -rf lib/*
 	rm -rf  obj/*
+	make -f makefile.udplog all
 	make -f makefile.json   all
 	make -f makefile.core   all
 	make -f makefile.ar     all

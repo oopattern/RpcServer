@@ -16,7 +16,6 @@ LIB_MEMCACHE := OFF
 
 ###############
 include ./makefile.base
-
 # g++ -o bin/hello -Icomponent/jsoncpp/include  server/main.cc -Lcomponent/lib -lccreactor
 	
 	

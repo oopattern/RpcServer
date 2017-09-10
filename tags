@@ -17,6 +17,14 @@ AE_TIME_EVENTS	component/net/event.h	17;"	d
 AE_WAIT_TIME	component/net/event.h	5;"	d
 AE_WRITABLE	component/net/event.h	14;"	d
 ALIGNAS	component/jsoncpp/src/json_value.cpp	32;"	d	file:
+ASSET_AND_BREAK	component/udplog/log_udp.h	98;"	d
+ASSET_AND_CONTINUE	component/udplog/log_udp.h	95;"	d
+ASSET_AND_RETURN_BOOL	component/udplog/log_udp.h	90;"	d
+ASSET_AND_RETURN_EX	component/udplog/log_udp.h	87;"	d
+ASSET_AND_RETURN_INT	component/udplog/log_udp.h	75;"	d
+ASSET_AND_RETURN_INT_FORMAT	component/udplog/log_udp.h	78;"	d
+ASSET_AND_RETURN_PTR	component/udplog/log_udp.h	84;"	d
+ASSET_AND_RETURN_VOID	component/udplog/log_udp.h	81;"	d
 Args	component/jsoncpp/include/value.h	/^  typedef std::vector<PathArgument> Args;$/;"	t	class:Json::Path
 ArrayIndex	component/jsoncpp/include/forwards.h	/^typedef unsigned int ArrayIndex;$/;"	t	namespace:Json
 ArrayIndex	component/jsoncpp/include/value.h	/^  typedef Json::ArrayIndex ArrayIndex;$/;"	t	class:Json::Value
@@ -71,6 +79,8 @@ DestroyClient	component/net/handle.cpp	/^void DestroyClient(int fd)$/;"	f
 DuplicationPolicy	component/jsoncpp/include/value.h	/^    enum DuplicationPolicy {$/;"	g	class:Json::Value::CZString
 ErrorInfo	component/jsoncpp/include/reader.h	/^  class ErrorInfo {$/;"	c	class:Json::Reader
 Errors	component/jsoncpp/include/reader.h	/^  typedef std::deque<ErrorInfo> Errors;$/;"	t	class:Json::Reader
+FILE_COUNTER	component/udplog/log_udp.cpp	42;"	d	file:
+FILE_SIZE	component/udplog/log_udp.cpp	41;"	d	file:
 FastWriter	component/jsoncpp/include/writer.h	/^class JSON_API FastWriter : public Writer {$/;"	c	namespace:Json
 FastWriter	component/jsoncpp/src/json_writer.cpp	/^FastWriter::FastWriter()$/;"	f	class:Json::FastWriter
 Features	component/jsoncpp/include/feature.h	/^class JSON_API Features {$/;"	c	namespace:Json
@@ -154,6 +164,20 @@ Kind	component/jsoncpp/include/value.h	/^  enum Kind {$/;"	g	class:Json::PathArg
 LIB_JSONCPP_JSON_TOOL_H_INCLUDED	component/jsoncpp/src/json_tool.h	7;"	d
 LIB_MEMCACHE	Makefile	/^LIB_MEMCACHE := OFF$/;"	m
 LIB_MYSQL	Makefile	/^LIB_MYSQL :=  OFF$/;"	m
+LOCAL_FLAG	component/udplog/log_udp.cpp	39;"	d	file:
+LOG_ALERT	component/udplog/log_udp.h	29;"	d
+LOG_BOOT	component/udplog/log_udp.h	37;"	d
+LOG_CNTT_CNTS	component/udplog/log_udp.cpp	88;"	d	file:
+LOG_CRIT	component/udplog/log_udp.h	30;"	d
+LOG_DEBUG	component/udplog/log_udp.h	35;"	d
+LOG_EMERG	component/udplog/log_udp.h	28;"	d
+LOG_ERROR	component/udplog/log_udp.h	31;"	d
+LOG_FATAL	component/udplog/log_udp.h	38;"	d
+LOG_INFO	component/udplog/log_udp.h	34;"	d
+LOG_NOTICE	component/udplog/log_udp.h	33;"	d
+LOG_TRACE	component/udplog/log_udp.h	39;"	d
+LOG_UDP_H	component/udplog/log_udp.h	3;"	d
+LOG_WARNING	component/udplog/log_udp.h	32;"	d
 LargestInt	component/jsoncpp/include/config.h	/^typedef Int64 LargestInt;$/;"	t	namespace:Json
 LargestInt	component/jsoncpp/include/config.h	/^typedef int LargestInt;$/;"	t	namespace:Json
 LargestInt	component/jsoncpp/include/value.h	/^  typedef Json::LargestInt LargestInt;$/;"	t	class:Json::Value
@@ -162,7 +186,12 @@ LargestUInt	component/jsoncpp/include/config.h	/^typedef unsigned int LargestUIn
 LargestUInt	component/jsoncpp/include/value.h	/^  typedef Json::LargestUInt LargestUInt;$/;"	t	class:Json::Value
 LoadCfg	component/net/global.cpp	/^void CGlobalCfg::LoadCfg(const char* host, int port)$/;"	f	class:CGlobalCfg
 Location	component/jsoncpp/include/reader.h	/^  typedef const Char* Location;$/;"	t	class:Json::Reader
+MAX_APP_NAME_LEN	component/udplog/log_udp.h	26;"	d
+MAX_CURR_TIME_STRING_LEN	component/udplog/log_udp.cpp	36;"	d	file:
 MAX_EVENT_NUM	component/net/event.h	7;"	d
+MAX_EXT_APP_NAME_LEN	component/udplog/log_udp.cpp	38;"	d	file:
+MAX_EXT_STRING_LEN	component/udplog/log_udp.cpp	37;"	d	file:
+MAX_LOG_BUFFER_LEN	component/udplog/log_udp.cpp	20;"	d	file:
 MainLoop	component/net/event.cpp	/^void MainLoop(aeEventLoop* eventLoop)$/;"	f
 Members	component/jsoncpp/include/value.h	/^  typedef std::vector<std::string> Members;$/;"	t	class:Json::Value
 Nodes	component/jsoncpp/include/reader.h	/^  typedef std::stack<Value*> Nodes;$/;"	t	class:Json::Reader
@@ -185,6 +214,7 @@ ProcessExpire	server/timer_queue.cpp	/^void CTimerQueue::ProcessExpire()$/;"	f	c
 ProcessFileEvent	component/net/event.cpp	/^int ProcessFileEvent(aeEventLoop* eventLoop)$/;"	f
 ProcessQuery	component/net/handle.cpp	/^int CClient::ProcessQuery()$/;"	f	class:CClient
 ProcessTimeEvent	component/net/event.cpp	/^int ProcessTimeEvent(aeEventLoop* eventLoop)$/;"	f
+REMOTE_FLAG	component/udplog/log_udp.cpp	40;"	d	file:
 ReadTimerfd	server/timer_queue.cpp	/^void ReadTimerfd(int timerfd)$/;"	f
 Reader	component/jsoncpp/include/reader.h	/^class JSON_API Reader {$/;"	c	namespace:Json
 Reader	component/jsoncpp/src/json_reader.cpp	/^Reader::Reader()$/;"	f	class:Json::Reader
@@ -227,6 +257,7 @@ TestRefReturn	server/main.cpp	/^void TestRefReturn()$/;"	f
 TestSet	server/main.cpp	/^void TestSet()$/;"	f
 TestTimeCallback	server/main.cpp	/^void TestTimeCallback(string& name)$/;"	f
 TestTimer	server/main.cpp	/^void TestTimer()$/;"	f
+TestUdplog	component/udplog/log_udp.cpp	/^int TestUdplog(void)$/;"	f
 TestUpper	server/main.cpp	/^void TestUpper()$/;"	f
 TestVector	server/main.cpp	/^void TestVector()$/;"	f
 TimeEntry	server/timer_queue.h	/^typedef std::pair<int,CTimer*> TimeEntry;$/;"	t
@@ -266,12 +297,15 @@ ValueMapAllocator	component/jsoncpp/include/value.h	/^class JSON_API ValueMapAll
 ValueType	component/jsoncpp/include/value.h	/^enum ValueType {$/;"	g	namespace:Json
 Writer	component/jsoncpp/include/writer.h	/^class JSON_API Writer {$/;"	c	namespace:Json
 __AE_EPOLL_H_	component/net/ae_epoll.h	2;"	d
+__ASSERT_AND_LOG	component/udplog/log_udp.h	72;"	d
 __EVENT_H__	component/net/event.h	2;"	d
 __GLOBAL_H__	component/net/global.h	2;"	d
 __HANDLE_H__	component/net/handle.h	2;"	d
 __JSON_INTF_H__	server/jsonintf.h	2;"	d
 __TIMER_H__	server/timer.h	2;"	d
 __TIMER_QUEUE_H__	server/timer_queue.h	2;"	d
+_log_cntt	component/udplog/log_udp.cpp	/^typedef struct _log_cntt$/;"	s	file:
+_log_pkt_header	component/udplog/log_udp.cpp	/^typedef struct _log_pkt_header$/;"	s	file:
 acted	component/net/event.h	/^    aeActedEvent *acted;$/;"	m	struct:aeEventLoop
 addChildValues_	component/jsoncpp/include/writer.h	/^  bool addChildValues_;$/;"	m	class:Json::StyledStreamWriter
 addChildValues_	component/jsoncpp/include/writer.h	/^  bool addChildValues_;$/;"	m	class:Json::StyledWriter
@@ -302,6 +336,8 @@ allowComments_	component/jsoncpp/include/feature.h	/^  bool allowComments_;$/;"	
 allowDroppedNullPlaceholders_	component/jsoncpp/include/feature.h	/^  bool allowDroppedNullPlaceholders_;$/;"	m	class:Json::Features
 allowNumericKeys_	component/jsoncpp/include/feature.h	/^  bool allowNumericKeys_;$/;"	m	class:Json::Features
 apidata	component/net/event.h	/^    void *apidata; \/* This is used for polling API specific data *\/$/;"	m	struct:aeEventLoop
+app_name_ext	component/udplog/log_udp.cpp	/^	char app_name_ext[MAX_EXT_APP_NAME_LEN + 1];$/;"	m	struct:_log_cntt	file:
+app_name_ext	component/udplog/log_udp.cpp	/^	char app_name_ext[MAX_EXT_APP_NAME_LEN + 1];$/;"	m	struct:_log_pkt_header	file:
 append	component/jsoncpp/src/json_value.cpp	/^Value& Value::append(const Value& value) { return (*this)[size()] = value; }$/;"	f	class:Json::Value
 args_	component/jsoncpp/include/value.h	/^  Args args_;$/;"	m	class:Json::Path
 arrayValue	component/jsoncpp/include/value.h	/^  arrayValue,    \/\/\/< array value (ordered list)$/;"	e	enum:Json::ValueType
@@ -336,8 +372,10 @@ childValues_	component/jsoncpp/include/writer.h	/^  ChildValues childValues_;$/;
 childValues_	component/jsoncpp/include/writer.h	/^  ChildValues childValues_;$/;"	m	class:Json::StyledWriter
 clear	component/jsoncpp/src/json_value.cpp	/^void Value::clear() {$/;"	f	class:Json::Value
 clientData	component/net/event.h	/^    void *clientData;$/;"	m	struct:aeFileEvent
+close_log	component/udplog/log_udp.cpp	/^void close_log(int h_sn)$/;"	f
 codePointToUTF8	component/jsoncpp/src/json_tool.h	/^static inline std::string codePointToUTF8(unsigned int cp) {$/;"	f	namespace:Json
 collectComments_	component/jsoncpp/include/reader.h	/^  bool collectComments_;$/;"	m	class:Json::Reader
+command	component/udplog/log_udp.cpp	/^	int command;$/;"	m	struct:_log_pkt_header	file:
 commentAfter	component/jsoncpp/include/value.h	/^  commentAfter, \/\/\/< a comment on the line after a value (only make sense for$/;"	e	enum:Json::CommentPlacement
 commentAfterOnSameLine	component/jsoncpp/include/value.h	/^  commentAfterOnSameLine, \/\/\/< a comment just after a value on the same line$/;"	e	enum:Json::CommentPlacement
 commentBefore	component/jsoncpp/include/value.h	/^  commentBefore = 0,      \/\/\/< a comment placed on the line before a value$/;"	e	enum:Json::CommentPlacement
@@ -349,6 +387,7 @@ const_iterator	component/jsoncpp/include/value.h	/^  typedef ValueConstIterator 
 containsControlCharacter	component/jsoncpp/src/json_writer.cpp	/^static bool containsControlCharacter(const char* str) {$/;"	f	namespace:Json
 containsNewLine	component/jsoncpp/src/json_reader.cpp	/^static bool containsNewLine(Reader::Location begin, Reader::Location end) {$/;"	f	namespace:Json
 cstr_	component/jsoncpp/include/value.h	/^    const char* cstr_;$/;"	m	class:Json::Value::CZString
+curFileName	component/udplog/log_udp.cpp	/^	std::string curFileName;	$/;"	m	struct:_log_cntt	file:
 currentBatch_	component/jsoncpp/src/json_batchallocator.h	/^  BatchInfo* currentBatch_;$/;"	m	class:Json::BatchAllocator
 currentItemIndex_	component/jsoncpp/include/value.h	/^    unsigned int currentItemIndex_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
 currentPageIndex_	component/jsoncpp/include/value.h	/^    Value** currentPageIndex_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
@@ -403,15 +442,20 @@ getFormatedErrorMessages	component/jsoncpp/src/json_reader.cpp	/^std::string Rea
 getFormattedErrorMessages	component/jsoncpp/src/json_reader.cpp	/^std::string Reader::getFormattedErrorMessages() const {$/;"	f	class:Json::Reader
 getLocationLineAndColumn	component/jsoncpp/src/json_reader.cpp	/^std::string Reader::getLocationLineAndColumn(Location location) const {$/;"	f	class:Json::Reader
 getLocationLineAndColumn	component/jsoncpp/src/json_reader.cpp	/^void Reader::getLocationLineAndColumn(Location location,$/;"	f	class:Json::Reader
+getLogFileName	component/udplog/log_udp.cpp	/^std::string getLogFileName(std::string app_name)$/;"	f
 getMemberNames	component/jsoncpp/src/json_value.cpp	/^Value::Members Value::getMemberNames() const {$/;"	f	class:Json::Value
+getNewFileOpened	component/udplog/log_udp.cpp	/^bool getNewFileOpened()$/;"	f
 getNextChar	component/jsoncpp/src/json_reader.cpp	/^Reader::Char Reader::getNextChar() {$/;"	f	class:Json::Reader
 getOffsetLimit	component/jsoncpp/src/json_value.cpp	/^size_t Value::getOffsetLimit() const { return limit_; }$/;"	f	class:Json::Value
 getOffsetStart	component/jsoncpp/src/json_value.cpp	/^size_t Value::getOffsetStart() const { return start_; }$/;"	f	class:Json::Value
 getStructuredErrors	component/jsoncpp/src/json_reader.cpp	/^std::vector<Reader::StructuredError> Reader::getStructuredErrors() const {$/;"	f	class:Json::Reader
+get_curr_time_string	component/udplog/log_udp.cpp	/^static inline char * get_curr_time_string(char * time_string_buffer, int buffer_len)$/;"	f	file:
+get_str_log_level	component/udplog/log_udp.cpp	/^static inline const char* get_str_log_level(int log_level)$/;"	f	file:
 good	component/jsoncpp/src/json_reader.cpp	/^bool Reader::good() const {$/;"	f	class:Json::Reader
 hasComment	component/jsoncpp/src/json_value.cpp	/^bool Value::hasComment(CommentPlacement placement) const {$/;"	f	class:Json::Value
 hasCommentForValue	component/jsoncpp/src/json_writer.cpp	/^bool StyledStreamWriter::hasCommentForValue(const Value& value) {$/;"	f	class:Json::StyledStreamWriter
 hasCommentForValue	component/jsoncpp/src/json_writer.cpp	/^bool StyledWriter::hasCommentForValue(const Value& value) {$/;"	f	class:Json::StyledWriter
+hton64	component/udplog/log_udp.cpp	/^static inline uint64_t hton64(uint64_t h64)$/;"	f	file:
 in	component/jsoncpp/src/json_reader.cpp	/^static inline bool in(Reader::Char c,$/;"	f	namespace:Json
 indent	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::indent() { indentString_ += indentation_; }$/;"	f	class:Json::StyledStreamWriter
 indent	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::indent() { indentString_ += std::string(indentSize_, ' '); }$/;"	f	class:Json::StyledWriter
@@ -423,6 +467,7 @@ index	component/jsoncpp/src/json_value.cpp	/^ArrayIndex Value::CZString::index()
 index_	component/jsoncpp/include/value.h	/^    ArrayIndex index_;$/;"	m	class:Json::Value::CZString
 index_	component/jsoncpp/include/value.h	/^  ArrayIndex index_;$/;"	m	class:Json::PathArgument
 initBasic	component/jsoncpp/src/json_value.cpp	/^void Value::initBasic(ValueType type, bool allocated) {$/;"	f	class:Json::Value
+init_log	component/udplog/log_udp.cpp	/^void init_log(char * app_name, uint32_t svr_type, uint32_t svr_id, int t_sn, int h_sn)$/;"	f
 intValue	component/jsoncpp/include/value.h	/^  intValue,      \/\/\/< signed integer value$/;"	e	enum:Json::ValueType
 int_	component/jsoncpp/include/value.h	/^    LargestInt int_;$/;"	m	union:Json::Value::ValueHolder
 integerToDouble	component/jsoncpp/src/json_value.cpp	/^static inline double integerToDouble(Json::UInt64 value) {$/;"	f	namespace:Json
@@ -462,6 +507,7 @@ items_	component/jsoncpp/include/value.h	/^  Value items_[itemPerLink];$/;"	m	cl
 iterator	component/jsoncpp/include/value.h	/^  typedef ValueIterator iterator;$/;"	t	class:Json::Value
 iterator_	component/jsoncpp/include/value.h	/^  } iterator_;$/;"	m	class:Json::ValueIteratorBase	typeref:union:Json::ValueIteratorBase::__anon3
 iterator_category	component/jsoncpp/include/value.h	/^  typedef std::bidirectional_iterator_tag iterator_category;$/;"	t	class:Json::ValueIteratorBase
+judgeCurrTimer	component/udplog/log_udp.cpp	/^bool judgeCurrTimer()$/;"	f
 kNull	component/jsoncpp/src/json_value.cpp	/^static const unsigned char ALIGNAS(8) kNull[sizeof(Value)] = { 0 };$/;"	m	namespace:Json	file:
 kNullRef	component/jsoncpp/src/json_value.cpp	/^const unsigned char& kNullRef = kNull[0];$/;"	m	namespace:Json	file:
 key_	component/jsoncpp/include/value.h	/^  std::string key_;$/;"	m	class:Json::PathArgument
@@ -474,6 +520,40 @@ lastValueEnd_	component/jsoncpp/include/reader.h	/^  Location lastValueEnd_;$/;"
 lastValue_	component/jsoncpp/include/reader.h	/^  Value* lastValue_;$/;"	m	class:Json::Reader
 limit_	component/jsoncpp/include/value.h	/^  size_t limit_;$/;"	m	class:Json::Value
 link_	component/jsoncpp/include/value.h	/^    ValueInternalLink* link_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+load_log_info	component/udplog/log_udp.cpp	/^static int load_log_info(log_cntt_t * p_log_cntt, uint32_t svr_id)$/;"	f	file:
+log_alert	component/udplog/log_udp.h	55;"	d
+log_alert_ext	component/udplog/log_udp.h	69;"	d
+log_boot	component/udplog/log_udp.h	59;"	d
+log_buffer	component/udplog/log_udp.cpp	/^	char log_buffer[MAX_LOG_BUFFER_LEN + 1];$/;"	m	struct:_log_cntt	file:
+log_cntt_t	component/udplog/log_udp.cpp	/^}log_cntt_t;$/;"	t	typeref:struct:_log_cntt	file:
+log_crit	component/udplog/log_udp.h	54;"	d
+log_crit_ext	component/udplog/log_udp.h	68;"	d
+log_data	component/udplog/log_udp.cpp	/^	char log_data[0];$/;"	m	struct:_log_pkt_header	file:
+log_debug	component/udplog/log_udp.h	49;"	d
+log_debug_ext	component/udplog/log_udp.h	63;"	d
+log_dir	component/udplog/log_udp.cpp	/^static char log_dir[128] = "..\/log\/";$/;"	v	file:
+log_emerg	component/udplog/log_udp.h	56;"	d
+log_emerg_ext	component/udplog/log_udp.h	70;"	d
+log_error	component/udplog/log_udp.h	53;"	d
+log_error_ext	component/udplog/log_udp.h	67;"	d
+log_fatal	component/udplog/log_udp.h	61;"	d
+log_fd	component/udplog/log_udp.cpp	/^	int log_fd;$/;"	m	struct:_log_cntt	file:
+log_info	component/udplog/log_udp.h	50;"	d
+log_info_ext	component/udplog/log_udp.h	64;"	d
+log_key	component/udplog/log_udp.cpp	/^static pthread_key_t log_key;$/;"	v	file:
+log_key_once	component/udplog/log_udp.cpp	/^static pthread_once_t log_key_once = PTHREAD_ONCE_INIT;$/;"	v	file:
+log_level	component/udplog/log_udp.cpp	/^	int log_level;$/;"	m	struct:_log_cntt	file:
+log_level	component/udplog/log_udp.cpp	/^	int log_level;$/;"	m	struct:_log_pkt_header	file:
+log_notice	component/udplog/log_udp.h	51;"	d
+log_notice_ext	component/udplog/log_udp.h	65;"	d
+log_pkt_header_t	component/udplog/log_udp.cpp	/^}log_pkt_header_t;$/;"	t	typeref:struct:_log_pkt_header	file:
+log_player	component/udplog/log_udp.h	101;"	d
+log_seq	component/udplog/log_udp.cpp	/^	uint64_t log_seq;$/;"	m	struct:_log_cntt	file:
+log_seq	component/udplog/log_udp.cpp	/^	uint64_t log_seq;$/;"	m	struct:_log_pkt_header	file:
+log_trace	component/udplog/log_udp.h	60;"	d
+log_type	component/udplog/log_udp.cpp	/^int log_type;	$/;"	v
+log_warning	component/udplog/log_udp.h	52;"	d
+log_warning_ext	component/udplog/log_udp.h	66;"	d
 m_bIsJson	server/jsonintf.h	/^    bool m_bIsJson;$/;"	m	class:CJsonIntf
 m_callback	server/timer.h	/^    TimerCallback m_callback;$/;"	m	class:CTimer
 m_cfd	component/net/handle.h	/^    int m_cfd;$/;"	m	class:CClient
@@ -501,6 +581,7 @@ main	component/net/server.cpp	/^int main(void)$/;"	f
 main	server/main.cpp	/^int main(void)$/;"	f
 make	component/jsoncpp/src/json_value.cpp	/^Value& Path::make(Value& root) const {$/;"	f	class:Json::Path
 makePath	component/jsoncpp/src/json_value.cpp	/^void Path::makePath(const std::string& path, const InArgs& in) {$/;"	f	class:Json::Path
+make_log_key	component/udplog/log_udp.cpp	/^static void make_log_key(void)$/;"	f	file:
 map_	component/jsoncpp/include/value.h	/^    ObjectValues* map_;$/;"	m	union:Json::Value::ValueHolder
 map_	component/jsoncpp/include/value.h	/^    ValueInternalMap* map_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
 map_	component/jsoncpp/include/value.h	/^    ValueInternalMap* map_;$/;"	m	union:Json::Value::ValueHolder
@@ -536,6 +617,7 @@ noDuplication	component/jsoncpp/include/value.h	/^      noDuplication = 0,$/;"	e
 nodes_	component/jsoncpp/include/reader.h	/^  Nodes nodes_;$/;"	m	class:Json::Reader
 normalizeEOL	component/jsoncpp/src/json_writer.cpp	/^std::string StyledStreamWriter::normalizeEOL(const std::string& text) {$/;"	f	class:Json::StyledStreamWriter
 normalizeEOL	component/jsoncpp/src/json_writer.cpp	/^std::string StyledWriter::normalizeEOL(const std::string& text) {$/;"	f	class:Json::StyledWriter
+ntoh64	component/udplog/log_udp.cpp	34;"	d	file:
 null	component/jsoncpp/include/value.h	/^  static const Value& null;$/;"	m	class:Json::Value
 null	component/jsoncpp/src/json_value.cpp	/^const Value& Value::null = reinterpret_cast<const Value&>(kNullRef);$/;"	m	class:Json::Value	file:
 nullValue	component/jsoncpp/include/value.h	/^  nullValue = 0, \/\/\/< 'null' value$/;"	e	enum:Json::ValueType
@@ -586,6 +668,7 @@ operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[
 operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[](const std::string& key) const {$/;"	f	class:Json::Value
 operator []	component/jsoncpp/src/json_value.cpp	/^const Value& Value::operator[](int index) const {$/;"	f	class:Json::Value
 operator const char*	component/jsoncpp/include/value.h	/^  operator const char*() const { return str_; }$/;"	f	class:Json::StaticString
+os	component/udplog/log_udp.cpp	/^	std::ofstream os;	$/;"	m	struct:_log_cntt	file:
 pageCount_	component/jsoncpp/include/value.h	/^  PageIndex pageCount_;$/;"	m	class:Json::ValueInternalArray
 pages_	component/jsoncpp/include/value.h	/^  Value** pages_;$/;"	m	class:Json::ValueInternalArray
 parse	component/jsoncpp/src/json_reader.cpp	/^Reader::parse(const std::string& document, Value& root, bool collectComments) {$/;"	f	class:Json::Reader
@@ -623,6 +706,7 @@ resolveReference	component/jsoncpp/src/json_value.cpp	/^Value& Value::resolveRef
 rfileProc	component/net/event.h	/^    aeFileProc *rfileProc;$/;"	m	struct:aeFileEvent
 rightMargin_	component/jsoncpp/include/writer.h	/^  int rightMargin_;$/;"	m	class:Json::StyledStreamWriter
 rightMargin_	component/jsoncpp/include/writer.h	/^  int rightMargin_;$/;"	m	class:Json::StyledWriter
+server_address	component/udplog/log_udp.cpp	/^	struct sockaddr_in server_address;$/;"	m	struct:_log_cntt	typeref:struct:_log_cntt::sockaddr_in	file:
 setComment	component/jsoncpp/src/json_value.cpp	/^void Value::CommentInfo::setComment(const char* text) {$/;"	f	class:Json::Value::CommentInfo
 setComment	component/jsoncpp/src/json_value.cpp	/^void Value::setComment(const char* comment, CommentPlacement placement) {$/;"	f	class:Json::Value
 setComment	component/jsoncpp/src/json_value.cpp	/^void Value::setComment(const std::string& comment, CommentPlacement placement) {$/;"	f	class:Json::Value
@@ -630,6 +714,8 @@ setItemUsed	component/jsoncpp/include/value.h	/^  inline void setItemUsed(bool i
 setMemberNameIsStatic	component/jsoncpp/include/value.h	/^  inline void setMemberNameIsStatic(bool isStatic) {$/;"	f	class:Json::Value
 setOffsetLimit	component/jsoncpp/src/json_value.cpp	/^void Value::setOffsetLimit(size_t limit) { limit_ = limit; }$/;"	f	class:Json::Value
 setOffsetStart	component/jsoncpp/src/json_value.cpp	/^void Value::setOffsetStart(size_t start) { start_ = start; }$/;"	f	class:Json::Value
+set_log_level	component/udplog/log_udp.cpp	/^void set_log_level(int log_level, int h_sn)$/;"	f
+set_log_type	component/udplog/log_udp.cpp	/^void set_log_type(int LogType)$/;"	f
 setsize	component/net/event.h	/^    int setsize; \/* max number of file descriptors tracked *\/$/;"	m	struct:aeEventLoop
 size	component/jsoncpp/src/json_value.cpp	/^ArrayIndex Value::size() const {$/;"	f	class:Json::Value
 size_	component/jsoncpp/include/value.h	/^  ArrayIndex size_;$/;"	m	class:Json::ValueInternalArray
@@ -650,6 +736,7 @@ string_	component/jsoncpp/include/value.h	/^    char* string_;$/;"	m	union:Json:
 swap	component/jsoncpp/src/json_value.cpp	/^void Value::CZString::swap(CZString& other) {$/;"	f	class:Json::Value::CZString
 swap	component/jsoncpp/src/json_value.cpp	/^void Value::swap(Value& other) {$/;"	f	class:Json::Value
 tailLink_	component/jsoncpp/include/value.h	/^  ValueInternalLink* tailLink_;$/;"	m	class:Json::ValueInternalMap
+timeinfo	component/udplog/log_udp.cpp	/^	struct tm timeinfo; $/;"	m	struct:_log_cntt	typeref:struct:_log_cntt::tm	file:
 toStyledString	component/jsoncpp/src/json_value.cpp	/^std::string Value::toStyledString() const {$/;"	f	class:Json::Value
 tokenArrayBegin	component/jsoncpp/include/reader.h	/^    tokenArrayBegin,$/;"	e	enum:Json::Reader::TokenType
 tokenArrayEnd	component/jsoncpp/include/reader.h	/^    tokenArrayEnd,$/;"	e	enum:Json::Reader::TokenType
@@ -668,6 +755,8 @@ tokenTrue	component/jsoncpp/include/reader.h	/^    tokenTrue,$/;"	e	enum:Json::R
 token_	component/jsoncpp/include/reader.h	/^    Token token_;$/;"	m	class:Json::Reader::ErrorInfo
 type	component/jsoncpp/src/json_value.cpp	/^ValueType Value::type() const { return type_; }$/;"	f	class:Json::Value
 type_	component/jsoncpp/include/reader.h	/^    TokenType type_;$/;"	m	class:Json::Reader::Token
+u64_ext	component/udplog/log_udp.cpp	/^	uint64_t u64_ext;$/;"	m	struct:_log_cntt	file:
+u64_ext	component/udplog/log_udp.cpp	/^	uint64_t u64_ext;$/;"	m	struct:_log_pkt_header	file:
 uintToString	component/jsoncpp/src/json_tool.h	/^static inline void uintToString(LargestUInt value, char*& current) {$/;"	f	namespace:Json
 uintToStringBufferSize	component/jsoncpp/src/json_tool.h	/^  uintToStringBufferSize = 3 * sizeof(LargestUInt) + 1$/;"	e	enum:Json::__anon4
 uintValue	component/jsoncpp/include/value.h	/^  uintValue,     \/\/\/< unsigned integer value$/;"	e	enum:Json::ValueType
@@ -703,6 +792,8 @@ writeValue	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writ
 writeValue	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeValue(const Value& value) {$/;"	f	class:Json::StyledWriter
 writeWithIndent	component/jsoncpp/src/json_writer.cpp	/^void StyledStreamWriter::writeWithIndent(const std::string& value) {$/;"	f	class:Json::StyledStreamWriter
 writeWithIndent	component/jsoncpp/src/json_writer.cpp	/^void StyledWriter::writeWithIndent(const std::string& value) {$/;"	f	class:Json::StyledWriter
+write_local_log	component/udplog/log_udp.cpp	/^int write_local_log(char* ptr, int curr_index)$/;"	f
+write_udp_log	component/udplog/log_udp.cpp	/^int write_udp_log(int h_sn, int log_level, const char *file_name, const char *func_name, const int line_num, const char *format, ...)$/;"	f
 yamlCompatiblityEnabled_	component/jsoncpp/include/writer.h	/^  bool yamlCompatiblityEnabled_;$/;"	m	class:Json::FastWriter
 zfree	component/net/ae_epoll.cpp	38;"	d	file:
 zmalloc	component/net/ae_epoll.cpp	36;"	d	file:

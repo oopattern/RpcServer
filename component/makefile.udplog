@@ -1,0 +1,12 @@
+#makefile  config 
+TARGET_PATH=lib
+TARGET=libudplog.a
+INC_DIR = udplog
+SRC_DIR = udplog
+OBJ_PATH = obj
+
+
+###################
+
+
+include ./makefile.base
