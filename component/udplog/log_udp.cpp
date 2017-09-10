@@ -388,11 +388,20 @@ std::string getLogFileName(std::string app_name)
 	std::stringstream ss;
 	time_t now = time(NULL);
 	p_log_cntt->timeinfo = *localtime(&now);
-	char buf[40];
-	strftime(buf, sizeof(buf), ".%Y%m%d", &(p_log_cntt->timeinfo));
-	ss << log_dir;
+	char date[40];
+	strftime(date, sizeof(date), "%Y%m%d", &(p_log_cntt->timeinfo));
+    char path[128];
+    snprintf(path, sizeof(path), "%s%s/", log_dir, date);
+
+    if (access(path, F_OK) != 0)
+    {
+        mkdir(path, 0777);
+    }
+
+	ss << path;
 	ss << gameName;
-	ss << buf;
+    ss << ".";
+	ss << date;
 	ss << ".log";
 	std::string logFileName;
 	logFileName = ss.str();

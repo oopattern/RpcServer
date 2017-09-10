@@ -422,7 +422,6 @@ void FuncEach(int num)
 void TestForeach()
 {
     std::vector<int> v = {1,2,3,4,5};
-    //for_each(v.begin(), v.end(), FuncEach);
     for_each(v.begin(), v.end(), std::bind(FuncEach, _1));
 }
 
