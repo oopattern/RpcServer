@@ -4,13 +4,52 @@
 #include <string.h>
 #include <set>
 #include <vector>
-#include "timer.h"
+#include <iostream>
+#include <functional>
 
 using std::set;
 
+class CTimer;
 // key: expiration, can not use map, since key(expiretion) may be the same
+typedef std::function<void()> TimerCallback;
 typedef std::pair<int,CTimer*> TimeEntry;
 typedef std::set<TimeEntry> TimerSet;
+
+
+class CTimer
+{
+public:
+    CTimer(TimerCallback& cb, int when, int interval) 
+        : m_callback(cb), m_expireSec(when), m_interval(interval)
+    {
+
+    }
+    void Run()
+    {
+        m_callback();
+    }
+    int GetExpire()
+    {
+        return m_expireSec;
+    }
+    bool IsRepeat()
+    {
+        return ((m_interval != 0) ? true : false);
+    }
+    bool IsValid()
+    {
+        return ((m_expireSec != 0) ? true : false);
+    }
+    void Restart(int now)
+    {
+        m_expireSec = now + m_interval;
+    }
+private:
+    TimerCallback m_callback;
+    int m_expireSec;
+    int m_interval;
+};
+
 
 class CTimerQueue
 {

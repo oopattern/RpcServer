@@ -15,7 +15,7 @@ static bool judgeCurrTimer();
 static bool getNewFileOpened();
 static int write_local_log(char* ptr, int curr_index);
 
-static char log_dir[128] = "../log/";
+static char log_dir[128] = "./log/";
 
 #define MAX_LOG_BUFFER_LEN (64*1024) // one log max size
 

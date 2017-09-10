@@ -1,6 +1,7 @@
 #makefile bin
-BIN_NAME=hello
-BIN_DIR=bin
+BIN_NAME = hello
+BIN_DIR = bin
+LOG_DIR = log
 INC_DIR = server
 SRC_DIR = server
 OBJ_PATH = obj

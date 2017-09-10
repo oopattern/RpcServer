@@ -75,7 +75,7 @@ $(OBJ_PATH)/%.o: %.cpp
 	
 	
 clean:
-	 rm -rf $(BIN) $(OBJ_PATH)/*
+	rm -rf $(BIN) $(OBJ_PATH)/* $(LOG_DIR)
 	
 a: 
 	echo  $(CC_LIB_INC_PATH)  $(OBJ)  $(OBJ_PATH) $(VPATH)

@@ -31,8 +31,8 @@ ArrayIndex	component/jsoncpp/include/value.h	/^  typedef Json::ArrayIndex ArrayI
 ArrayIndex	component/jsoncpp/include/value.h	/^  typedef Value::ArrayIndex ArrayIndex;$/;"	t	class:Json::ValueInternalArray
 BIND_F1	server/main.cpp	/^typedef std::function<void (string&,float)> BIND_F1;$/;"	t	file:
 BIND_F2	server/main.cpp	/^typedef std::function<void (int,int,int)> BIND_F2;$/;"	t	file:
-BIN_DIR	Makefile	/^BIN_DIR=bin$/;"	m
-BIN_NAME	Makefile	/^BIN_NAME=hello$/;"	m
+BIN_DIR	Makefile	/^BIN_DIR = bin$/;"	m
+BIN_NAME	Makefile	/^BIN_NAME = hello$/;"	m
 BatchAllocator	component/jsoncpp/src/json_batchallocator.h	/^  BatchAllocator(unsigned int objectsPerPage = 255)$/;"	f	class:Json::BatchAllocator
 BatchAllocator	component/jsoncpp/src/json_batchallocator.h	/^class BatchAllocator {$/;"	c	namespace:Json
 BatchInfo	component/jsoncpp/src/json_batchallocator.h	/^  struct BatchInfo {$/;"	s	class:Json::BatchAllocator
@@ -170,6 +170,7 @@ LOG_BOOT	component/udplog/log_udp.h	37;"	d
 LOG_CNTT_CNTS	component/udplog/log_udp.cpp	88;"	d	file:
 LOG_CRIT	component/udplog/log_udp.h	30;"	d
 LOG_DEBUG	component/udplog/log_udp.h	35;"	d
+LOG_DIR	Makefile	/^LOG_DIR = log$/;"	m
 LOG_EMERG	component/udplog/log_udp.h	28;"	d
 LOG_ERROR	component/udplog/log_udp.h	31;"	d
 LOG_FATAL	component/udplog/log_udp.h	38;"	d
@@ -531,7 +532,7 @@ log_crit_ext	component/udplog/log_udp.h	68;"	d
 log_data	component/udplog/log_udp.cpp	/^	char log_data[0];$/;"	m	struct:_log_pkt_header	file:
 log_debug	component/udplog/log_udp.h	49;"	d
 log_debug_ext	component/udplog/log_udp.h	63;"	d
-log_dir	component/udplog/log_udp.cpp	/^static char log_dir[128] = "..\/log\/";$/;"	v	file:
+log_dir	component/udplog/log_udp.cpp	/^static char log_dir[128] = ".\/log\/";$/;"	v	file:
 log_emerg	component/udplog/log_udp.h	56;"	d
 log_emerg_ext	component/udplog/log_udp.h	70;"	d
 log_error	component/udplog/log_udp.h	53;"	d
