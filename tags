@@ -54,8 +54,12 @@ CPPTL_JSON_ASSERTIONS_H_INCLUDED	component/jsoncpp/include/assertions.h	7;"	d
 CPPTL_JSON_FEATURES_H_INCLUDED	component/jsoncpp/include/feature.h	7;"	d
 CPPTL_JSON_H_INCLUDED	component/jsoncpp/include/value.h	7;"	d
 CPPTL_JSON_READER_H_INCLUDED	component/jsoncpp/include/reader.h	7;"	d
-CTimer	server/timer.h	/^    CTimer(TimerCallback& cb, int when, int interval) $/;"	f	class:CTimer
-CTimer	server/timer.h	/^class CTimer$/;"	c
+CTestThread	server/thread.h	/^    CTestThread(int num) $/;"	f	class:CTestThread
+CTestThread	server/thread.h	/^class CTestThread$/;"	c
+CThread	server/thread.h	/^    CThread(const ThreadFunc& func, const std::string& name) $/;"	f	class:CThread
+CThread	server/thread.h	/^class CThread$/;"	c
+CTimer	server/timer_queue.h	/^    CTimer(TimerCallback& cb, int when, int interval) $/;"	f	class:CTimer
+CTimer	server/timer_queue.h	/^class CTimer$/;"	c
 CTimerQueue	server/timer_queue.cpp	/^CTimerQueue::CTimerQueue()$/;"	f	class:CTimerQueue
 CTimerQueue	server/timer_queue.h	/^class CTimerQueue$/;"	c
 CZString	component/jsoncpp/include/value.h	/^  class CZString {$/;"	c	class:Json::Value
@@ -70,6 +74,7 @@ CommentInfo	component/jsoncpp/include/value.h	/^  struct CommentInfo {$/;"	s	cla
 CommentInfo	component/jsoncpp/src/json_value.cpp	/^Value::CommentInfo::CommentInfo() : comment_(0) {}$/;"	f	class:Json::Value::CommentInfo
 CommentPlacement	component/jsoncpp/include/value.h	/^enum CommentPlacement {$/;"	g	namespace:Json
 CompareSize	server/main.cpp	/^bool CompareSize(string& s, int size)$/;"	f
+Consume	server/thread.h	/^    void Consume()$/;"	f	class:CTestThread
 CreateClient	component/net/handle.cpp	/^int CreateClient(int cfd)$/;"	f
 CreateEventLoop	component/net/event.cpp	/^aeEventLoop* CreateEventLoop(int setsize)$/;"	f
 CreateFileEvent	component/net/event.cpp	/^int CreateFileEvent(aeEventLoop* eventLoop, int fd, int mask, aeFileProc* proc, void* clientData)$/;"	f
@@ -86,13 +91,16 @@ FastWriter	component/jsoncpp/src/json_writer.cpp	/^FastWriter::FastWriter()$/;"	
 Features	component/jsoncpp/include/feature.h	/^class JSON_API Features {$/;"	c	namespace:Json
 Features	component/jsoncpp/src/json_reader.cpp	/^Features::Features()$/;"	f	class:Json::Features
 FuncEach	server/main.cpp	/^void FuncEach(int num)$/;"	f
-GetExpire	server/timer.h	/^    int GetExpire()$/;"	f	class:CTimer
+GetExpire	server/timer_queue.h	/^    int GetExpire()$/;"	f	class:CTimer
 GetIntArrayFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetIntArrayFromJson(const char* key, std::vector<int>& vecInt)$/;"	f	class:CJsonIntf
 GetIntFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetIntFromJson(const char* key, int& nIntVal, int nDefaultInt)$/;"	f	class:CJsonIntf
 GetObjectArrayFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetObjectArrayFromJson(const char* key, std::vector<Json::Value>& vecJson)$/;"	f	class:CJsonIntf
 GetObjectFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetObjectFromJson(const char* key, Json::Value& jsonVal)$/;"	f	class:CJsonIntf
+GetPid	server/thread.h	/^    pid_t GetPid()$/;"	f	class:CThread
 GetStringArrayFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetStringArrayFromJson(const char* key, std::vector<std::string>& vecStr)$/;"	f	class:CJsonIntf
 GetStringFromJson	server/jsonintf.cpp	/^int CJsonIntf::GetStringFromJson(const char* key, std::string& nStringVal, std::string& nDefaultString)$/;"	f	class:CJsonIntf
+GetThreadId	server/thread.h	/^    pthread_t GetThreadId() $/;"	f	class:CThread
+GetThreadName	server/thread.h	/^    const std::string& GetThreadName() const$/;"	f	class:CThread
 GetTimerfd	server/timer_queue.h	/^    int  GetTimerfd() { return m_timerfd; }$/;"	f	class:CTimerQueue
 HandleAccept	component/net/handle.cpp	/^int HandleAccept(aeEventLoop* eventLoop, int fd, void* clientData, int mask)$/;"	f
 HandleQuery	component/net/handle.cpp	/^int HandleQuery(aeEventLoop* eventLoop, int fd, void* clientData, int mask)$/;"	f
@@ -110,8 +118,8 @@ Int64	component/jsoncpp/include/value.h	/^  typedef Json::Int64 Int64;$/;"	t	cla
 InternalFlags	component/jsoncpp/include/value.h	/^  enum InternalFlags {$/;"	g	class:Json::ValueInternalLink
 IsIntegral	component/jsoncpp/src/json_value.cpp	/^static bool IsIntegral(double d) {$/;"	f	namespace:Json
 IsJson	server/jsonintf.cpp	/^bool CJsonIntf::IsJson()$/;"	f	class:CJsonIntf
-IsRepeat	server/timer.h	/^    bool IsRepeat()$/;"	f	class:CTimer
-IsValid	server/timer.h	/^    bool IsValid()$/;"	f	class:CTimer
+IsRepeat	server/timer_queue.h	/^    bool IsRepeat()$/;"	f	class:CTimer
+IsValid	server/timer_queue.h	/^    bool IsValid()$/;"	f	class:CTimer
 IteratorState	component/jsoncpp/include/value.h	/^    IteratorState() : array_(0), currentPageIndex_(0), currentItemIndex_(0) {}$/;"	f	struct:Json::ValueInternalArray::IteratorState
 IteratorState	component/jsoncpp/include/value.h	/^    IteratorState() : map_(0), link_(0), itemIndex_(0), bucketIndex_(0) {}$/;"	f	struct:Json::ValueInternalMap::IteratorState
 IteratorState	component/jsoncpp/include/value.h	/^  struct IteratorState \/\/ Must be a POD$/;"	s	class:Json::ValueInternalArray
@@ -148,6 +156,8 @@ JSON_USE_EXCEPTION	component/jsoncpp/include/config.h	33;"	d
 JSON_USE_INT64_DOUBLE_CONVERSION	component/jsoncpp/include/config.h	73;"	d
 JSON_VERSION_H_INCLUDED	component/jsoncpp/include/version.h	5;"	d
 JSON_WRITER_H_INCLUDED	component/jsoncpp/include/writer.h	7;"	d
+Join	server/thread.h	/^    void Join()$/;"	f	class:CThread
+JoinAll	server/thread.h	/^    void JoinAll()$/;"	f	class:CTestThread
 Json	component/jsoncpp/include/config.h	/^namespace Json {$/;"	n
 Json	component/jsoncpp/include/feature.h	/^namespace Json {$/;"	n
 Json	component/jsoncpp/include/forwards.h	/^namespace Json {$/;"	n
@@ -193,6 +203,7 @@ MAX_EVENT_NUM	component/net/event.h	7;"	d
 MAX_EXT_APP_NAME_LEN	component/udplog/log_udp.cpp	38;"	d	file:
 MAX_EXT_STRING_LEN	component/udplog/log_udp.cpp	37;"	d	file:
 MAX_LOG_BUFFER_LEN	component/udplog/log_udp.cpp	20;"	d	file:
+MSG_MAX_NUM	server/thread.h	/^const int MSG_MAX_NUM = 10;$/;"	v
 MainLoop	component/net/event.cpp	/^void MainLoop(aeEventLoop* eventLoop)$/;"	f
 Members	component/jsoncpp/include/value.h	/^  typedef std::vector<std::string> Members;$/;"	t	class:Json::Value
 Nodes	component/jsoncpp/include/reader.h	/^  typedef std::stack<Value*> Nodes;$/;"	t	class:Json::Reader
@@ -215,21 +226,26 @@ ProcessExpire	server/timer_queue.cpp	/^void CTimerQueue::ProcessExpire()$/;"	f	c
 ProcessFileEvent	component/net/event.cpp	/^int ProcessFileEvent(aeEventLoop* eventLoop)$/;"	f
 ProcessQuery	component/net/handle.cpp	/^int CClient::ProcessQuery()$/;"	f	class:CClient
 ProcessTimeEvent	component/net/event.cpp	/^int ProcessTimeEvent(aeEventLoop* eventLoop)$/;"	f
+Product	server/thread.h	/^    void Product(int msgNum)$/;"	f	class:CTestThread
 REMOTE_FLAG	component/udplog/log_udp.cpp	40;"	d	file:
 ReadTimerfd	server/timer_queue.cpp	/^void ReadTimerfd(int timerfd)$/;"	f
 Reader	component/jsoncpp/include/reader.h	/^class JSON_API Reader {$/;"	c	namespace:Json
 Reader	component/jsoncpp/src/json_reader.cpp	/^Reader::Reader()$/;"	f	class:Json::Reader
 Reader	component/jsoncpp/src/json_reader.cpp	/^Reader::Reader(const Features& features)$/;"	f	class:Json::Reader
 ResetTimerfd	server/timer_queue.cpp	/^void ResetTimerfd(int timerfd, int expire)$/;"	f
-Restart	server/timer.h	/^    void Restart(int now)$/;"	f	class:CTimer
-Run	server/timer.cpp	/^void CTimer::Run()$/;"	f	class:CTimer
+Restart	server/timer_queue.h	/^    void Restart(int now)$/;"	f	class:CTimer
+Run	server/timer_queue.h	/^    void Run()$/;"	f	class:CTimer
 RunAfter	server/timer_queue.cpp	/^void CTimerQueue::RunAfter(TimerCallback& cb, int delay, int interval)$/;"	f	class:CTimerQueue
 RunAt	server/timer_queue.cpp	/^void CTimerQueue::RunAt(TimerCallback& cb, int when, int interval)$/;"	f	class:CTimerQueue
+RunInThread	server/thread.h	/^    void RunInThread()$/;"	f	struct:ThreadData
 SRC_DIR	Makefile	/^SRC_DIR = server$/;"	m
 SelfType	component/jsoncpp/include/value.h	/^  typedef ValueConstIterator SelfType;$/;"	t	class:Json::ValueConstIterator
 SelfType	component/jsoncpp/include/value.h	/^  typedef ValueIterator SelfType;$/;"	t	class:Json::ValueIterator
 SelfType	component/jsoncpp/include/value.h	/^  typedef ValueIteratorBase SelfType;$/;"	t	class:Json::ValueIteratorBase
 SendToClient	component/net/handle.cpp	/^int CClient::SendToClient(const char* buf, int len)$/;"	f	class:CClient
+SetDefaultName	server/thread.h	/^    void SetDefaultName()$/;"	f	class:CThread
+Start	server/thread.h	/^    void Start()$/;"	f	class:CThread
+StartThread	server/thread.h	/^void* StartThread(void *arg)$/;"	f
 StaticString	component/jsoncpp/include/value.h	/^  explicit StaticString(const char* czstring) : str_(czstring) {}$/;"	f	class:Json::StaticString
 StaticString	component/jsoncpp/include/value.h	/^class JSON_API StaticString {$/;"	c	namespace:Json
 StructuredError	component/jsoncpp/include/reader.h	/^  struct StructuredError {$/;"	s	class:Json::Reader
@@ -261,8 +277,11 @@ TestTimer	server/main.cpp	/^void TestTimer()$/;"	f
 TestUdplog	component/udplog/log_udp.cpp	/^int TestUdplog(void)$/;"	f
 TestUpper	server/main.cpp	/^void TestUpper()$/;"	f
 TestVector	server/main.cpp	/^void TestVector()$/;"	f
+ThreadData	server/thread.h	/^    ThreadData(const ThreadFunc& func, const std::string& name)$/;"	f	struct:ThreadData
+ThreadData	server/thread.h	/^struct ThreadData$/;"	s
+ThreadFunc	server/thread.h	/^typedef std::function<void ()> ThreadFunc;$/;"	t
 TimeEntry	server/timer_queue.h	/^typedef std::pair<int,CTimer*> TimeEntry;$/;"	t
-TimerCallback	server/timer.h	/^typedef std::function<void()> TimerCallback;$/;"	t
+TimerCallback	server/timer_queue.h	/^typedef std::function<void()> TimerCallback;$/;"	t
 TimerSet	server/timer_queue.h	/^typedef std::set<TimeEntry> TimerSet;$/;"	t
 Token	component/jsoncpp/include/reader.h	/^  class Token {$/;"	c	class:Json::Reader
 TokenType	component/jsoncpp/include/reader.h	/^  enum TokenType {$/;"	g	class:Json::Reader
@@ -303,7 +322,6 @@ __EVENT_H__	component/net/event.h	2;"	d
 __GLOBAL_H__	component/net/global.h	2;"	d
 __HANDLE_H__	component/net/handle.h	2;"	d
 __JSON_INTF_H__	server/jsonintf.h	2;"	d
-__TIMER_H__	server/timer.h	2;"	d
 __TIMER_QUEUE_H__	server/timer_queue.h	2;"	d
 _log_cntt	component/udplog/log_udp.cpp	/^typedef struct _log_cntt$/;"	s	file:
 _log_pkt_header	component/udplog/log_udp.cpp	/^typedef struct _log_pkt_header$/;"	s	file:
@@ -556,14 +574,21 @@ log_type	component/udplog/log_udp.cpp	/^int log_type;	$/;"	v
 log_warning	component/udplog/log_udp.h	52;"	d
 log_warning_ext	component/udplog/log_udp.h	66;"	d
 m_bIsJson	server/jsonintf.h	/^    bool m_bIsJson;$/;"	m	class:CJsonIntf
-m_callback	server/timer.h	/^    TimerCallback m_callback;$/;"	m	class:CTimer
+m_callback	server/timer_queue.h	/^    TimerCallback m_callback;$/;"	m	class:CTimer
 m_cfd	component/net/handle.h	/^    int m_cfd;$/;"	m	class:CClient
 m_clientMap	component/net/global.h	/^    ClientMap m_clientMap;$/;"	m	class:CGlobalCfg
-m_expireSec	server/timer.h	/^    int m_expireSec;$/;"	m	class:CTimer
+m_cond	server/thread.h	/^    pthread_cond_t m_cond;$/;"	m	class:CTestThread
+m_expireSec	server/timer_queue.h	/^    int m_expireSec;$/;"	m	class:CTimer
 m_fd	component/net/global.h	/^    int m_fd; \/\/ listen fd$/;"	m	class:CGlobalCfg
+m_func	server/thread.h	/^    ThreadFunc m_func;$/;"	m	class:CThread
+m_func	server/thread.h	/^    ThreadFunc m_func;$/;"	m	struct:ThreadData
 m_host	component/net/global.h	/^    string m_host;$/;"	m	class:CGlobalCfg
-m_interval	server/timer.h	/^    int m_interval;$/;"	m	class:CTimer
+m_interval	server/timer_queue.h	/^    int m_interval;$/;"	m	class:CTimer
+m_msg	server/thread.h	/^    std::deque<std::string> m_msg;$/;"	m	class:CTestThread
+m_mutex	server/thread.h	/^    pthread_mutex_t m_mutex;$/;"	m	class:CTestThread
 m_name	component/net/handle.h	/^    string m_name;$/;"	m	class:CClient
+m_name	server/thread.h	/^    std::string m_name;$/;"	m	class:CThread
+m_name	server/thread.h	/^    std::string m_name;$/;"	m	struct:ThreadData
 m_nread	component/net/handle.h	/^    int m_nread;$/;"	m	class:CClient
 m_pEventLoop	component/net/global.h	/^    aeEventLoop* m_pEventLoop;$/;"	m	class:CGlobalCfg
 m_pInstance	component/net/global.cpp	/^CGlobalCfg* CGlobalCfg::m_pInstance = NULL;$/;"	m	class:CGlobalCfg	file:
@@ -573,6 +598,8 @@ m_querybuf	component/net/handle.h	/^    char m_querybuf[AE_BUF_SIZE];$/;"	m	clas
 m_reader	server/jsonintf.h	/^    Json::Reader m_reader;$/;"	m	class:CJsonIntf
 m_replybuf	component/net/handle.h	/^    char m_replybuf[AE_BUF_SIZE];$/;"	m	class:CClient
 m_replylen	component/net/handle.h	/^    int m_replylen;$/;"	m	class:CClient
+m_threads	server/thread.h	/^    std::vector<CThread*> m_threads;$/;"	m	class:CTestThread
+m_tid	server/thread.h	/^    pthread_t m_tid;$/;"	m	class:CThread
 m_timerSet	server/timer_queue.h	/^    TimerSet m_timerSet;$/;"	m	class:CTimerQueue
 m_timerfd	server/timer_queue.h	/^    int m_timerfd; \/\/ use linux timefd_xxx, with epoll, better than time wheel$/;"	m	class:CTimerQueue
 m_value	server/jsonintf.h	/^    Json::Value m_value;$/;"	m	class:CJsonIntf
@@ -707,6 +734,8 @@ resolveReference	component/jsoncpp/src/json_value.cpp	/^Value& Value::resolveRef
 rfileProc	component/net/event.h	/^    aeFileProc *rfileProc;$/;"	m	struct:aeFileEvent
 rightMargin_	component/jsoncpp/include/writer.h	/^  int rightMargin_;$/;"	m	class:Json::StyledStreamWriter
 rightMargin_	component/jsoncpp/include/writer.h	/^  int rightMargin_;$/;"	m	class:Json::StyledWriter
+s_numCreated	server/main.cpp	/^int CThread::s_numCreated = 0;$/;"	m	class:CThread	file:
+s_numCreated	server/thread.h	/^    static int s_numCreated;$/;"	m	class:CThread
 server_address	component/udplog/log_udp.cpp	/^	struct sockaddr_in server_address;$/;"	m	struct:_log_cntt	typeref:struct:_log_cntt::sockaddr_in	file:
 setComment	component/jsoncpp/src/json_value.cpp	/^void Value::CommentInfo::setComment(const char* text) {$/;"	f	class:Json::Value::CommentInfo
 setComment	component/jsoncpp/src/json_value.cpp	/^void Value::setComment(const char* comment, CommentPlacement placement) {$/;"	f	class:Json::Value

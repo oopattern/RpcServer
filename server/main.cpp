@@ -11,6 +11,7 @@
 #include <functional>
 #include "jsonintf.h"
 #include "timer_queue.h"
+#include "thread.h"
 #include "../component/udplog/log_udp.h"
 #include "../component/net/event.h"
 #include "../component/net/ae_epoll.h"
@@ -425,8 +426,12 @@ void TestForeach()
     for_each(v.begin(), v.end(), std::bind(FuncEach, _1));
 }
 
+int CThread::s_numCreated = 0;
+
 int main(void)
 {
-    TestUdplog();
+    CTestThread t(5);
+    t.Product(MSG_MAX_NUM);
+    t.JoinAll();
     return 0;
 }
